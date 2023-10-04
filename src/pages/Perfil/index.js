@@ -1,13 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TextInput, View,TouchableOpacity } from 'react-native';
-import FontAwesome from "@expo/vector-icons/FontAwesome";
+import { StyleSheet, Text, View } from 'react-native';
 
-export default function Feed() {
+export default function Perfil() {
   return (
     <View style={styles.container}>
-      <Text>tela 1</Text>
+      <Text>Meu Perfil</Text>
     </View>
-
   );
 }
 
