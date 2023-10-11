@@ -1,84 +1,61 @@
+
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
-    container:{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        
+    container: {
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'flex-start',
     },
-    logo:{
-        height:'20%',
-        width:'100%',
-        justifyContent: 'center',
-        alignItems: 'center',
+    viewInput:{
+      height:'10%',
+      width:'100%',
+      alignItems: 'center',
+      justifyContent: 'center',
     },
-    
-    textoSobreInputUsuario:{
-        justifyContent: 'center',
-        alignItems: 'center',
-        height:'5%',
-        width:'100%',
-       
+    input:{
+      height:'60%',
+      width:'70%',
+      borderWidth:1,
+      borderColor:'#d2982e',
+      borderRadius:10,
+      marginTop:3,
     },
-    textoSobreInputSenha:{
-        justifyContent: 'center',
-        alignItems: 'center',
-        height:'5%',
-        width:'100%',
-        
-    },
-    viewInputUsuario:{
-        justifyContent: 'center',
-        alignItems: 'center',
-        height:'10%',
-        width:'100%',
-        
-    },
-    viewInputSenha:{
-        justifyContent: 'center',
-        alignItems: 'center',
-        height:'10%',
-        width:'100%',
-        
-    },
-    viewButtonLogin:{
-        justifyContent: 'center',
-        alignItems: 'center',
-        height:'10%',
-        width:'100%',
-        
-    },
-    buttonLogin:{
-        height:'70%',
-        width:'30%',
-        borderWidth:1,
-        borderRadius:10,
-        backgroundColor:'#ffa500',
-        justifyContent: 'center',
-        alignItems: 'center',
-    
-    },
-    inputLogin:{
-        borderWidth: 1.5,   
-        borderRadius:14,
-        textAlign:'center',
-        fontSize:15,
-        height:'70%',
-        width:'50%',
-      
-    },
-    text:{
-        fontSize:19,
-        fontFamily:'Arial',
-    },
-    viewButtonRegister:{
-        flexDirection:'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height:'40%',
-        width:'100%',
-        backgroundColor:'',
-    },
-})
+    buttonLogar:{
+      backgroundColor:'#ffa500'	,
+      borderWidth: 1,
+      borderColor:'#d2982e',
+      borderRadius:16,
 
+      alignItems:'center',
+      justifyContent:'center',
+      height:'7%',
+      width:'52%',
+      margin:15,
+    },
+    buttonIrParaRegistro:{
+      color:'#ffa500'	,
+      borderWidth: 0,
+
+      alignItems:'center',
+      justifyContent:'center',
+      height:'5%',
+      width:'25%',
+    },
+    viewInputs:{
+        alignItems:'center',
+        justifyContent:'flex-start',
+        flex:1,
+        width:'100%',
+        margin:15,
+    },
+    viewCima:{
+        height:'10%',
+        width:'100%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor:'#ffa500',
+    },
+
+  });

@@ -21,12 +21,29 @@ export const styles = StyleSheet.create({
       borderColor:'#d2982e',
       borderRadius:10,
       marginTop:3,
+      textAlign:'center',
     },
-    buttonLogin:{
-      color:'#ffa500'	,
+    buttonRegistrar:{
+      backgroundColor:'#ffa500'	,
       borderWidth: 1,
+      borderColor:'#d2982e',
+      borderRadius:16,
 
-      height:'40%',
-      width:'55%',
+      alignItems:'center',
+      justifyContent:'center',
+      height:'30%',
+      width:'65%',
+      marginBottom:15,
     },
+    buttonIrParaLogin:{
+      color:'#ffa500'	,
+      borderWidth: 0,
+
+      alignItems:'center',
+      justifyContent:'center',
+      height:'20%',
+      width:'30%',
+      marginBottom:0,
+    },
+
   });

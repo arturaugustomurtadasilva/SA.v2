@@ -2,9 +2,19 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, TextInput, View,TouchableOpacity } from 'react-native';
 import { styles } from './styles'
+import { useState } from 'react';
 
 
 export default function Registro() {
+
+  const [nome, setNome] = useState('')
+  const [sobrenome, setSobrenome] = useState('')
+  const [email, setEmail] = useState('')
+  const [cpf, setCpf] = useState('')
+  const [telefone, setTelefone] = useState('')
+  const [senha, setSenha] = useState('')
+  const [confirmarSenha, setConfirmarSenha] = useState('')
+
   return (
     <View style={styles.container}>
 
@@ -21,7 +31,7 @@ export default function Registro() {
         
         <View style={styles.viewInput}>
             <Text>Nome:</Text>
-            <TextInput style={styles.input}>
+            <TextInput style={styles.input} value={nome} onChangeText={setNome}>
                 
             </TextInput>
         </View>
@@ -74,11 +84,11 @@ export default function Registro() {
                         justifyContent: 'center',
                         alignItems: 'center',
                       }}>
-            <TouchableOpacity style={styles.buttonLogin} onPress={() => navigation.navigate('Login')}> 
-              <Text>Registrar</Text>
+            <TouchableOpacity style={styles.buttonRegistrar} onPress={() => navigation.navigate('Login')}> 
+              <Text style={{color:'black',fontSize:20,}}>Concluir</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.buttonLogin} onPress={() => navigation.navigate('Login')}> 
+            <TouchableOpacity style={styles.buttonIrParaLogin} onPress={() => navigation.navigate('Login')}> 
               <Text>Fazer Login</Text>
             </TouchableOpacity>
 
@@ -87,4 +97,6 @@ export default function Registro() {
     </View>
   );
 }
+
+
 
