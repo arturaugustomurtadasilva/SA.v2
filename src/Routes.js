@@ -4,19 +4,21 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import Feed from './pages/Feed'
 import Cadastro from './pages/Cadastro'
 import Perfil from './pages/Perfil'
+
 import { Ionicons } from '@expo/vector-icons'
 
 const Tab = createBottomTabNavigator();
 
 export default function Routes(){
+
     return(
         <Tab.Navigator
             screenOptions={{
                 headerShown:false,
                 tabBarShowLabel: false,
-                
+                    
                 tabBarStyle:{
-                
+                    
                     position:'absolute',
                     backgroundColor:'#f5f5dc',
                     borderTopWidth: 0,
@@ -62,5 +64,6 @@ export default function Routes(){
                 }}
             />
         </Tab.Navigator>
-    )
+        )
+
 }

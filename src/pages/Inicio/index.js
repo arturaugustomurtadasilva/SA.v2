@@ -4,7 +4,7 @@ import { TouchableOpacity } from 'react-native';
 import { styles } from './styles.js'
 import { useNavigation } from "@react-navigation/native";
 import { Ionicons } from '@expo/vector-icons'
-import ScrollTutorial from '../../components/ScrollTutorial/index.js';
+
 
 export default function Inicio() {
 
@@ -27,16 +27,12 @@ export default function Inicio() {
         </View> 
 
         <View style={styles.viewMeio}>
-            <ScrollTutorial/>
+            
         </View> 
 
         <View style={styles.viewBaixo}>
-            <TouchableOpacity style={styles.botaoProximo}>
-                <Text style={{color:'black'}}>Próximo</Text>
-            </TouchableOpacity>
-
             <TouchableOpacity style={styles.botaoPular} onPress={() => navigation.navigate('Registro')}>
-                <Text style={{color:'black'}}>Pular</Text>
+                <Text style={{color:'black'}}>Seguir</Text>
             </TouchableOpacity>
         </View>
 

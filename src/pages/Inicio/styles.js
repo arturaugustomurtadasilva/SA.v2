@@ -21,14 +21,14 @@ export const styles = StyleSheet.create({
     },
     viewMeio: {
         width:'100%',
-        height:'60%',
+        height:'70%',
 
         alignItems: 'center',
         justifyContent: 'center',
     },
     viewBaixo: {
         width:'100%',
-        height:'20%',
+        height:'10%',
 
         alignItems: 'center',
         justifyContent: 'space-evenly',
@@ -48,7 +48,7 @@ export const styles = StyleSheet.create({
     botaoPular: {
 
         width:'65%',
-        height:'30%',
+        height:'60%',
 
         alignItems: 'center',
         justifyContent: 'center',

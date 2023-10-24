@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
       height:'90%',
       backgroundColor: 'white',
       alignItems: 'center',
-      justifyContent: 'center',
+      justifyContent: 'flex-start',
     },
     viewLista:{
       width:'65%',

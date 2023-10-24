@@ -4,9 +4,10 @@ import React from "react";
 import { View, Text, StyleSheet,Button, TextInput,TouchableOpacity, Image,} from "react-native";
 import { styles } from './styles'
 
+export const logado = false
 
 export default function Login(){
-    
+
     const navigation = useNavigation();
     return(
 
@@ -34,7 +35,6 @@ export default function Login(){
                     
                 </TextInput>
             </View>
-            
                 <TouchableOpacity style={styles.buttonLogar} onPress={() => navigation.navigate('Home')}> 
                 <Text style={{color:'black',fontSize:20,}}>Concluir</Text>
                 </TouchableOpacity>
@@ -48,6 +48,5 @@ export default function Login(){
     
     )
 }
-
 
 
