@@ -6,7 +6,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Routes from './src/Routes'
 import Login from './src/pages/Login'
 import Registro from './src/pages/Registro'
-import Feed from './src/pages/Feed'
+import ListasSalvas from './src/pages/ListasSalvas'
+import Inicio from './src/pages/Inicio'
 
 const Stack = createNativeStackNavigator();
 
@@ -19,17 +20,19 @@ function Home() {
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{
-                headerShown:false,          
-            }}>
-        <Stack.Screen name="Login" component={Login}/>
-        <Stack.Screen name="Registro" component={Registro}/>
-        <Stack.Screen name="Home" component={Home}/>
+      <Stack.Navigator>
+        <Stack.Screen options={{headerShown:false,}} name="Inicio" component={Inicio}/>
+        <Stack.Screen options={{headerShown:false,}} name="Login" component={Login}/>
+        <Stack.Screen options={{headerShown:false,}} name="Registro" component={Registro}/>
+        <Stack.Screen options={{headerShown:true,}} name="ListasSalvas" component={ListasSalvas}/>
+        <Stack.Screen options={{headerShown:false,}} name="Home" component={Home}/>
       </Stack.Navigator>
     </NavigationContainer>
 
   );
 }
+
+
 
 
 

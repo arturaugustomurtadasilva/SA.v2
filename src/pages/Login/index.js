@@ -13,7 +13,12 @@ export default function Login(){
     <View style={styles.container}>
 
         <View style={styles.viewCima}>
-            <Text>Login</Text>
+            <View style={{width:'100%',height:'65%'}}>
+                
+            </View>
+            <View style={{width:'100%',height:'35%',justifyContent:"flex-start",alignItems:'center'}}>
+                <Text>Login</Text>
+            </View>
         </View>
 
         <View style={styles.viewInputs}>

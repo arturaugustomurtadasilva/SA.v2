@@ -3,16 +3,18 @@ import { Text, View,TextInput, } from 'react-native';
 import {Picker} from '@react-native-picker/picker';
 import { styles } from './styles'
 import { useState } from 'react';
-import { TouchableOpacity } from 'react-native-web';
+import { TouchableOpacity } from 'react-native';
 
 export default function Cadastro() {
-  const [selectGenero, setSelectGenero] = useState(0)
   const [titulo, setTitulo] = useState('')
   const [genero, setGenero] = useState('')
+  const [tamanhoLista, setTamanhoLista] = useState('')
+  const [desconto, setDesconto] = useState('')
 
-  function addLista() {
-    console.log("nome: " + titulo 
-                + "\nGênero: " + genero)
+  function addLista(){
+    const listaTemp = {
+
+    }
   }
 
 
@@ -44,13 +46,21 @@ export default function Cadastro() {
           </View>
           <View style={styles.viewInput}>
               <Text style={styles.textInput}>Tamanho da lista</Text>
-                <TextInput style={styles.input}>
+                <TextInput 
+                  style={styles.input}
+                  value={tamanhoLista}
+                  onChangeText={setTamanhoLista}
+                  >
                   
                 </TextInput>
           </View>
           <View style={styles.viewInput}>
               <Text style={styles.textInput}>desconto desejado</Text>
-                <TextInput style={styles.input}>
+                <TextInput 
+                  style={styles.input}
+                  value={desconto}
+                  onChangeText={setDesconto}
+                  >
                   
                 </TextInput>
           </View>

@@ -14,13 +14,14 @@ export default function Routes(){
             screenOptions={{
                 headerShown:false,
                 tabBarShowLabel: false,
+                
                 tabBarStyle:{
-                    
+                
                     position:'absolute',
                     backgroundColor:'#f5f5dc',
                     borderTopWidth: 0,
 
-                    height:55,
+                    height:'12%',
                 }    
             }}
         >
@@ -30,33 +31,33 @@ export default function Routes(){
                 options={{
                     tabBarIcon: ({color,size,focused}) => {
                         if(focused){
-                            return <Ionicons name='bookmarks-outline' size={40} color={'#ffa500'}/>
+                            return <Ionicons name='bookmarks-outline' size={55} color={'#ffa500'}/>
                         }
-                        return <Ionicons name='bookmarks-outline' size={40} color={'#b87e14'}/>
+                        return <Ionicons name='bookmarks-outline' size={50} color={'#b87e14'}/>
                     }
                 }}
             />
             <Tab.Screen 
-                name="Login" 
+                name="Cadastro" 
                 component={Cadastro} 
                 options={{
                     tabBarIcon: ({color,size,focused}) => {
                         if(focused){
-                            return <Ionicons name='create-outline' size={40} color={'#ffa500'}/>
+                            return <Ionicons name='create-outline' size={55} color={'#ffa500'}/>
                         }
-                        return <Ionicons name='create-outline' size={40} color={'#b87e14'}/>
+                        return <Ionicons name='create-outline' size={50} color={'#b87e14'}/>
                     }
                 }}
             />
             <Tab.Screen 
-                name="Register" 
+                name="Perfil" 
                 component={Perfil}
                 options={{
                     tabBarIcon: ({color,size,focused}) => {
                         if(focused){
-                            return <Ionicons name='person-outline' size={40} color={'#ffa500'}/>
+                            return <Ionicons name='person-outline' size={55} color={'#ffa500'}/>
                         }
-                        return <Ionicons name='person-outline' size={40} color={'#b87e14'}/>
+                        return <Ionicons name='person-outline' size={50} color={'#b87e14'}/>
                     }
                 }}
             />

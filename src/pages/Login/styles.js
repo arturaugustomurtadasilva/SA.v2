@@ -26,7 +26,7 @@ export const styles = StyleSheet.create({
       backgroundColor:'#ffa500'	,
       borderWidth: 1,
       borderColor:'#d2982e',
-      borderRadius:16,
+      borderRadius:5,
 
       alignItems:'center',
       justifyContent:'center',
@@ -51,11 +51,12 @@ export const styles = StyleSheet.create({
         margin:15,
     },
     viewCima:{
-        height:'10%',
+        height:'12%',
         width:'100%',
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor:'#ffa500',
+        marginBottom:40,
     },
 
   });
