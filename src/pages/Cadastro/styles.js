@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
       height:'10%',
       width:'100%',
       alignItems:'center',
-      justifyContent:'center',
+      justifyContent:'flex-end',
       backgroundColor:'#ffa500'
     },
     textTitle: {
@@ -22,7 +22,7 @@ export const styles = StyleSheet.create({
       width:'100%',
       alignItems: 'center',
       justifyContent: 'flex-start',
-      gap:10,
+      
     },
     viewInput:{
       height:'10%',
@@ -38,7 +38,7 @@ export const styles = StyleSheet.create({
     input:{
       borderWidth:1,
       borderColor:'#b87e14',
-      height:'100%',
+      height:'40%',
       width:'55%',
       borderRadius:10,
     }
