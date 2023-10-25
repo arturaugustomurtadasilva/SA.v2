@@ -5,14 +5,6 @@ import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { useState } from 'react';
 import { useNavigation } from "@react-navigation/native";
 
-function mudar(){
-
-}
-
-function irConf() {
-  
-}
-
 export default function Perfil() {
 
   const navigation = useNavigation();
@@ -30,8 +22,8 @@ export default function Perfil() {
           <View style={styles.logUm}>
             <FontAwesome
             name='user'
-            size={100}
-            color='white'
+            size={90}
+            color='black'
           />
           </View>
           <View style={styles.tituloH1}>
@@ -92,7 +84,7 @@ export default function Perfil() {
         </View>
         <View style={styles.baixo}>
           
-            <TouchableOpacity onPress={mudar} style={styles.botaoAdd}>
+            <TouchableOpacity style={styles.botaoAdd}>
               <Text>EDITAR DADOS</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate('ListasSalvas')} style={styles.botaoAdd}>
@@ -104,15 +96,9 @@ export default function Perfil() {
       <View style={styles.footer}>
 
       </View>
-      </View>
+    <StatusBar style="auto" />
+    </View>
     
   );
 }
 
-{/* <View style={styles.}></View>
-<View style={styles.}></View>
-<View style={styles.}></View>
-<View style={styles.}></View>
-<View style={styles.}></View>
-<View style={styles.}></View>
-<View style={styles.}></View> */}

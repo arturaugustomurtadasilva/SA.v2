@@ -139,7 +139,7 @@ const navigation = useNavigation();
                         alignItems: 'center',
                       }}>
             <TouchableOpacity style={styles.buttonRegistrar} onPress={() => functionCombined()}> 
-              <Text style={{color:'black',fontSize:20,}}>Concluir</Text>
+              <Text style={{color:'black',fontSize:15,}}>Concluir</Text>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.buttonIrParaLogin} onPress={() => navigation.navigate('Login')} > 

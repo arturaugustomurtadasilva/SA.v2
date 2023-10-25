@@ -54,8 +54,11 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         borderWidth:2,
         borderColor:'#ffa500',
-        backgroundColor:'white',
+        backgroundColor:'#ffa500',
         borderRadius:5,
 
+    },
+    botaoNav:{
+    borderWidth:1,
     },
   });

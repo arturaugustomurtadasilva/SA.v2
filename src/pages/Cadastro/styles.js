@@ -29,18 +29,18 @@ export const styles = StyleSheet.create({
       width:'100%',
       alignItems: 'center',
       justifyContent: 'center',
-      
     },
     textInput:{
-      fontSize:19,
+      fontSize:15,
   
     },
     input:{
-      borderWidth:1,
+      borderWidth :1,
       borderColor:'#b87e14',
       height:'40%',
-      width:'55%',
-      borderRadius:10,
+      width:'45%',
+      borderRadius: 5,
+      textAlign: 'center',
     }
   });
   

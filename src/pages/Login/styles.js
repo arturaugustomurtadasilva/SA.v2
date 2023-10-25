@@ -15,12 +15,13 @@ export const styles = StyleSheet.create({
       justifyContent: 'center',
     },
     input:{
-      height:'60%',
-      width:'70%',
+      height:'50%',
+      width:'40%',
       borderWidth:1,
       borderColor:'#d2982e',
-      borderRadius:10,
+      borderRadius:5,
       marginTop:3,
+      textAlign: 'center',
     },
     buttonLogar:{
       backgroundColor:'#ffa500'	,
@@ -30,7 +31,7 @@ export const styles = StyleSheet.create({
 
       alignItems:'center',
       justifyContent:'center',
-      height:'7%',
+      height:'6%',
       width:'52%',
       margin:15,
     },

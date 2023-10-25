@@ -36,7 +36,7 @@ export default function Login(){
                 </TextInput>
             </View>
                 <TouchableOpacity style={styles.buttonLogar} onPress={() => navigation.navigate('Home')}> 
-                <Text style={{color:'black',fontSize:20,}}>Concluir</Text>
+                <Text style={{color:'black',fontSize:15,}}>Concluir</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.buttonIrParaRegistro} onPress={() => navigation.navigate('Registro')}> 
