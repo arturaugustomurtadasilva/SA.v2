@@ -3,19 +3,19 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
     container: {
       flex:1,
-      backgroundColor: 'white',
+      backgroundColor: '#ffa500',
       alignItems: 'center',
-      justifyContent: 'center',
+      justifyContent: 'flex-start',
     },
     viewTitulo: {
-      width:'100%',
+      width:'40%',
       height:'10%',
       backgroundColor: 'white',
       alignItems: 'center',
       justifyContent: 'center',
     },
     viewFeed: {
-      width:'100%',
+      width:'90%',
       height:'90%',
       backgroundColor: 'white',
       alignItems: 'center',
@@ -43,9 +43,22 @@ export const styles = StyleSheet.create({
       flexDirection:'row',
       padding:5,
     },
-    viewTituloLista: {
-      width:'50%',
-      height:'100%',
+    body:{
+      width:'85%',
+      height:'80%',
+      backgroundColor:'white',
+      borderColor:'black',
+      borderWidth:1,
+      alignItems:'center',
+      justifyContent:'center',
+      borderRadius:25,
+      marginTop:50,
+
+
+    },
+    textTitle:{
+      fontSize:20,
+  
     },
     
   });

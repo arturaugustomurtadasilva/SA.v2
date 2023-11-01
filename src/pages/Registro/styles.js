@@ -7,6 +7,7 @@ export const styles = StyleSheet.create({
       backgroundColor: '#fff',
       alignItems: 'center',
       justifyContent: 'center',
+      backgroundColor:'#ffa500'
     },
     viewInput:{
       height:'9%',
@@ -31,7 +32,7 @@ export const styles = StyleSheet.create({
 
       alignItems:'center',
       justifyContent:'center',
-      height:'22%',
+      height:'8%',
       width:'50%',
       margin:10,
     },
@@ -45,5 +46,16 @@ export const styles = StyleSheet.create({
       width:'30%',
       marginBottom:0,
     },
+    body:{
+      alignItems:'center',
+      justifyContent:'center',
+      width:'80%',
+      height:'80%',
+      backgroundColor:'white',
+      borderRadius:25,
+      borderColor:'black',
+      borderWidth:1,
+    },
+   
 
   });

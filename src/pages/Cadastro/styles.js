@@ -3,19 +3,20 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: 'white',
       alignItems: 'center',
-      justifyContent: 'center',
+      justifyContent: 'flex-start',
+      backgroundColor:'#ffa500'
+      
     },
     viewTitulo: {
       height:'10%',
       width:'100%',
       alignItems:'center',
-      justifyContent:'flex-end',
-      backgroundColor:'#ffa500'
+      justifyContent:'center',
+      
     },
     textTitle: {
-      fontSize:23,
+      fontSize:30,
     },
     viewInputsGeral:{
       height:'90%',
@@ -31,16 +32,39 @@ export const styles = StyleSheet.create({
       justifyContent: 'center',
     },
     textInput:{
-      fontSize:15,
+      fontSize:19,
   
     },
     input:{
       borderWidth :1,
       borderColor:'#b87e14',
-      height:'40%',
-      width:'45%',
+      height:'45%',
+      width:'55%',
       borderRadius: 5,
       textAlign: 'center',
-    }
+    },
+    body:{
+      width:'85%',
+      height:'80%',
+      backgroundColor:'white',
+      borderRadius:25,
+      marginTop:50,
+      borderColor:'black',
+      borderWidth:1,
+    },
+    buttonLista:{
+      marginTop:30,
+      alignItems:'center',
+      justifyContent:'center',
+      borderWidth:1,
+      borderColor:'#ffa500',
+      width:'40%',
+      height:'9%',
+      borderRadius:5,
+      textAlign:'center'
+    },
+    textoButton:{
+      textAlign:'center'
+    },
   });
   

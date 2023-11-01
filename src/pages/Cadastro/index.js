@@ -20,59 +20,64 @@ export default function Cadastro() {
 
   return (
     <View style={styles.container}>
-      <View style={styles.viewTitulo}><Text style={styles.textTitle}>Cadastre sua lista</Text></View>
-      
-      <View style={styles.viewInputsGeral}>
+      <View style={styles.body}>
 
-        <View style={styles.viewInput}>
-              <Text style={styles.textInput}>Título da lista</Text>
-              <TextInput
-               style={styles.input}
-               value={titulo}
-               onChangeText={setTitulo}
-              >
-                  
-              </TextInput>
-          </View>
+        <View style={styles.viewTitulo}><Text style={styles.textTitle}>Cadastre sua lista</Text></View>
+        
+        <View style={styles.viewInputsGeral}>
+
           <View style={styles.viewInput}>
-              <Text style={styles.textInput}>Gênero</Text>
-                <TextInput 
-                  style={styles.input}
-                  value={genero}
-                  onChangeText={setGenero}
+                <Text style={styles.textInput}>Título da lista</Text>
+                <TextInput
+                style={styles.input}
+                value={titulo}
+                onChangeText={setTitulo}
                 >
-                  
+                    
                 </TextInput>
-          </View>
-          <View style={styles.viewInput}>
-              <Text style={styles.textInput}>Tamanho da lista</Text>
-                <TextInput 
-                  style={styles.input}
-                  value={tamanhoLista}
-                  onChangeText={setTamanhoLista}
+            </View>
+            <View style={styles.viewInput}>
+                <Text style={styles.textInput}>Gênero</Text>
+                  <TextInput 
+                    style={styles.input}
+                    value={genero}
+                    onChangeText={setGenero}
                   >
+                    
+                  </TextInput>
+            </View>
+            <View style={styles.viewInput}>
+                <Text style={styles.textInput}>Tamanho da lista</Text>
+                  <TextInput 
+                    style={styles.input}
+                    value={tamanhoLista}
+                    onChangeText={setTamanhoLista}
+                    >
+                    
+                  </TextInput>
+            </View>
+            <View style={styles.viewInput}>
+                <Text style={styles.textInput}>desconto desejado</Text>
+                  <TextInput 
+                    style={styles.input}
+                    value={desconto}
+                    onChangeText={setDesconto}
+                    >
+                    
+                  </TextInput>
                   
-                </TextInput>
-          </View>
-          <View style={styles.viewInput}>
-              <Text style={styles.textInput}>desconto desejado</Text>
-                <TextInput 
-                  style={styles.input}
-                  value={desconto}
-                  onChangeText={setDesconto}
-                  >
-                  
-                </TextInput>
-                
-          </View>
-          <View>
-            <TouchableOpacity onPress={addLista}>
-              <Text>
-                addLista
-              </Text>
-            </TouchableOpacity>
-          </View>
+            </View>
+            
+              <TouchableOpacity style={styles.buttonLista} onPress={addLista}>
+                <Text style={styles.textoButton}>
+                  addLista
+                </Text>
+              </TouchableOpacity>
+            
+        </View>
       </View>
+
+      
 
     </View>
   );

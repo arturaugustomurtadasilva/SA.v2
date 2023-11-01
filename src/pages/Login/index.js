@@ -13,16 +13,12 @@ export default function Login(){
 
     <View style={styles.container}>
 
-        <View style={styles.viewCima}>
-            <View style={{width:'100%',height:'65%'}}>
-                
+        <View style={styles.body}>
+            
+            <View>
+            <Text>Login</Text>
             </View>
-            <View style={{width:'100%',height:'35%',justifyContent:"flex-start",alignItems:'center'}}>
-                <Text>Login</Text>
-            </View>
-        </View>
 
-        <View style={styles.viewInputs}>
             <View style={styles.viewInput}>
                 <Text>Usuário</Text>
                 <TextInput style={styles.input}>
@@ -35,16 +31,17 @@ export default function Login(){
                     
                 </TextInput>
             </View>
-                <TouchableOpacity style={styles.buttonLogar} onPress={() => navigation.navigate('Home')}> 
-                <Text style={{color:'black',fontSize:15,}}>Concluir</Text>
-                </TouchableOpacity>
+            <TouchableOpacity style={styles.buttonLogar} onPress={() => navigation.navigate('Home')}> 
+            <Text style={{color:'black',fontSize:15,}}>Concluir</Text>
+            </TouchableOpacity>
 
-                <TouchableOpacity style={styles.buttonIrParaRegistro} onPress={() => navigation.navigate('Registro')}> 
-                <Text>Fazer Registro</Text>
-                </TouchableOpacity>
+            <TouchableOpacity style={styles.buttonIrParaRegistro} onPress={() => navigation.navigate('Registro')}> 
+            <Text>Fazer Registro</Text>
+            </TouchableOpacity>
         </View>
-
     </View>
+        
+    
     
     )
 }

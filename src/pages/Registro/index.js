@@ -42,110 +42,96 @@ const navigation = useNavigation();
   return (
     <View style={styles.container}>
 
-        <View style={{  height:'12%',width:'100%',justifyContent: 'center',
-                        alignItems: 'center',backgroundColor:'#ffa500',}}>
 
-            <View style={{width:'100%',height:'65%'}}>
-                
-            </View>
+        <View style={styles.body}>
 
-            <View style={{width:'100%',height:'35%',justifyContent:"flex-start",alignItems:'center'}}>
-                <Text>Registro</Text>
+            <View style={{margin:10}}>
+                <Text style={{fontSize:30}}>Registro</Text>
+
             </View>
             
-        </View>
-        
-        <View style={styles.viewInput}>
-            <Text>Nome:</Text>
-            <TextInput 
-                style={styles.input} 
-                value={nome} 
-                onChangeText={setNome}
-            >
+                <View style={styles.viewInput}>
+                    <Text>Nome:</Text>
+                    <TextInput 
+                        style={styles.input} 
+                        value={nome} 
+                        onChangeText={setNome}
+                    >
+                        
+                    </TextInput>
+                </View>
+                <View style={styles.viewInput}>
+                    <Text>Sobrenome:</Text>
+                    <TextInput 
+                        style={styles.input}
+                        value={sobrenome} 
+                        onChangeText={setSobrenome}
+                        >
+                        
+                    </TextInput>
+                </View>
                 
-            </TextInput>
-        </View>
-        <View style={styles.viewInput}>
-            <Text>Sobrenome:</Text>
-            <TextInput 
-                style={styles.input}
-                value={sobrenome} 
-                onChangeText={setSobrenome}
-                >
+                <View style={styles.viewInput}>
+                    <Text>Email:</Text>
+                    <TextInput 
+                        style={styles.input}
+                        value={email} 
+                        onChangeText={setEmail}
+                    >
+                        
+                    </TextInput>
+                </View>
                 
-            </TextInput>
-        </View>
-        
-        <View style={styles.viewInput}>
-            <Text>Email:</Text>
-            <TextInput 
-                style={styles.input}
-                value={email} 
-                onChangeText={setEmail}
-            >
+                <View style={styles.viewInput}>
+                    <Text>CPF:</Text>
+                    <TextInput 
+                        style={styles.input}
+                        value={cpf} 
+                        onChangeText={setCpf}
+                    >
+                        
+                    </TextInput>
+                </View>
                 
-            </TextInput>
-        </View>
-        
-        <View style={styles.viewInput}>
-            <Text>CPF:</Text>
-            <TextInput 
-                style={styles.input}
-                value={cpf} 
-                onChangeText={setCpf}
-            >
+                <View style={styles.viewInput}>
+                    <Text>Telefone:</Text>
+                    <TextInput 
+                        style={styles.input}
+                        value={telefone} 
+                        onChangeText={setTelefone}
+                    >
+                        
+                    </TextInput>
+                </View>
                 
-            </TextInput>
-        </View>
-        
-        <View style={styles.viewInput}>
-            <Text>Telefone:</Text>
-            <TextInput 
-                style={styles.input}
-                value={telefone} 
-                onChangeText={setTelefone}
-            >
+                <View style={styles.viewInput}>
+                    <Text>Senha:</Text>
+                    <TextInput 
+                        style={styles.input}
+                        value={senha} 
+                        onChangeText={setConfirmarSenha}
+                        >
+                            
+                    </TextInput>
+                </View>
                 
-            </TextInput>
-        </View>
-        
-        <View style={styles.viewInput}>
-            <Text>Senha:</Text>
-            <TextInput 
-                style={styles.input}
-                value={senha} 
-                onChangeText={setConfirmarSenha}
-                >
-                    
-            </TextInput>
-        </View>
-        
-        <View style={styles.viewInput}>
-            <Text>Confirmar Senha:</Text>
-            <TextInput 
-                style={styles.input}
-                value={confirmarSenha} 
-                onChangeText={setConfirmarSenha}
-                >
-                    
-            </TextInput>
-        </View>
+                <View style={styles.viewInput}>
+                    <Text>Confirmar Senha:</Text>
+                    <TextInput 
+                        style={styles.input}
+                        value={confirmarSenha} 
+                        onChangeText={setConfirmarSenha}
+                        >
+                            
+                    </TextInput>
+                </View>
+                <TouchableOpacity style={styles.buttonRegistrar} onPress={() => functionCombined()}> 
+                <Text style={{color:'black',fontSize:15,}}>Concluir</Text>
+                </TouchableOpacity>
 
-        
-        
-        <View  style={{ height:'25%',
-                        width:'100%',
-                        justifyContent: 'flex-start',
-                        alignItems: 'center',
-                      }}>
-            <TouchableOpacity style={styles.buttonRegistrar} onPress={() => functionCombined()}> 
-              <Text style={{color:'black',fontSize:15,}}>Concluir</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity style={styles.buttonIrParaLogin} onPress={() => navigation.navigate('Login')} > 
-              <Text>Fazer Login</Text>
-            </TouchableOpacity>
-
+                <TouchableOpacity style={styles.buttonIrParaLogin} onPress={() => navigation.navigate('Login')} > 
+                <Text>Fazer Login</Text>
+                </TouchableOpacity>
         </View>
     
     </View>

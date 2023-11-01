@@ -4,19 +4,19 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
+      backgroundColor: '#ffa500',
       alignItems: 'center',
-      justifyContent: 'flex-start',
+      justifyContent: 'center',
     },
     viewInput:{
-      height:'10%',
+      height:'25%',
       width:'100%',
       alignItems: 'center',
       justifyContent: 'center',
     },
     input:{
       height:'50%',
-      width:'40%',
+      width:'60%',
       borderWidth:1,
       borderColor:'#d2982e',
       borderRadius:5,
@@ -31,7 +31,7 @@ export const styles = StyleSheet.create({
 
       alignItems:'center',
       justifyContent:'center',
-      height:'6%',
+      height:'15%',
       width:'52%',
       margin:15,
     },
@@ -58,6 +58,17 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor:'#ffa500',
         marginBottom:40,
+    },
+    body:{
+      width:'90%',
+      height:'40%',
+      backgroundColor:'white',
+      borderRadius:25,
+      marginTop:50,
+      borderColor:'black',
+      borderWidth:1,
+      justifyContent: 'center',
+      alignItems: 'center',
     },
 
   });
