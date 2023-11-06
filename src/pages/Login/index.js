@@ -1,6 +1,6 @@
 
 import { useNavigation } from "@react-navigation/native";
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, StyleSheet,Button, TextInput,TouchableOpacity, Image,} from "react-native";
 import { styles } from './styles'
 
@@ -9,6 +9,17 @@ export const logado = false
 export default function Login(){
 
     const navigation = useNavigation();
+
+    const [usuario,setUsuario] = useState()
+    const [senha,setSenha] = useState()
+
+    function login() {
+        const UsuarioLog = {
+            usuario: usuario,
+            senha: senha,
+        }
+    }
+
     return(
 
     <View style={styles.container}>
@@ -21,13 +32,19 @@ export default function Login(){
 
             <View style={styles.viewInput}>
                 <Text>Usuário</Text>
-                <TextInput style={styles.input}>
+                <TextInput 
+                    style={styles.input}
+                    value={usuario} 
+                    onChangeText={setUsuario}>
                     
                 </TextInput>
             </View>
             <View style={styles.viewInput}>
                 <Text>Senha</Text>
-                <TextInput style={styles.input}>
+                <TextInput 
+                    style={styles.input} 
+                    value={senha} 
+                    onChangeText={setSenha}>
                     
                 </TextInput>
             </View>

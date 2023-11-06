@@ -109,7 +109,7 @@ const navigation = useNavigation();
                     <TextInput 
                         style={styles.input}
                         value={senha} 
-                        onChangeText={setConfirmarSenha}
+                        onChangeText={setSenha}
                         >
                             
                     </TextInput>
