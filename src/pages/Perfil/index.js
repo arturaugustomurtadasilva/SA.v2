@@ -1,5 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TouchableOpacity, Image, TextInput } from 'react-native';
+
+import { Text, View, TouchableOpacity,TextInput } from 'react-native';
 import { styles } from './styles'
 import { Ionicons } from '@expo/vector-icons'
 import { useState } from 'react';
@@ -39,11 +39,11 @@ export default function Perfil() {
         </View>
 
         <View style={styles.baixo}>
-        <TouchableOpacity style={styles.botaoAdd}>
-          <Text>EDITAR DADOS</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('Opcoes')} style={styles.botaoAdd}>
+          <Text>Opções</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate('ListasSalvas')} style={styles.botaoAdd}>
-          <Text>MINHAS LISTAS</Text>
+          <Text>Minhas listas</Text>
         </TouchableOpacity>
         </View>
       </View>
@@ -51,7 +51,6 @@ export default function Perfil() {
       <View style={styles.footer}>
       </View>
   
-      <StatusBar style="auto" />
     </View>
     
   );

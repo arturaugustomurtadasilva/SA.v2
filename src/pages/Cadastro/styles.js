@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#ffa500',
+      backgroundColor: '#173265',
       alignItems: 'center',
       justifyContent: 'flex-start',
       
@@ -67,17 +67,8 @@ export const styles = StyleSheet.create({
       height:'25%',
       width:'30%',
       borderWidth:1,
-      borderRadius:10,
-      backgroundColor:'#f5f5dc',
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    botaoAdd:{
-      height:'25%',
-      width:'30%',
-      borderWidth:1,
-      borderRadius:10,
-      backgroundColor:'#f5f5dc',
+      borderRadius:5,
+      backgroundColor:'white',
       justifyContent: 'center',
       alignItems: 'center',
     },

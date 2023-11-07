@@ -8,6 +8,7 @@ import Login from './src/pages/Login'
 import Registro from './src/pages/Registro'
 import ListasSalvas from './src/pages/ListasSalvas'
 import Inicio from './src/pages/Inicio'
+import Opcoes from './src/pages/Opcoes'
 
 const Stack = createNativeStackNavigator();
 
@@ -26,6 +27,7 @@ export default function App() {
         <Stack.Screen options={{headerShown:false,}} name="Registro" component={Registro}/>
         <Stack.Screen options={{headerShown:true,}} name="ListasSalvas" component={ListasSalvas}/>
         <Stack.Screen options={{headerShown:false,}} name="Home" component={Home}/>
+        <Stack.Screen options={{headerShown:true,}} name="Opcoes" component={Opcoes}/>
       </Stack.Navigator>
     </NavigationContainer>
 

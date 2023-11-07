@@ -1,8 +1,9 @@
 
 import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
-import { View, Text, StyleSheet,Button, TextInput,TouchableOpacity, Image,} from "react-native";
+import { View, Text, TextInput,TouchableOpacity,} from "react-native";
 import { styles } from './styles'
+import { Ionicons } from '@expo/vector-icons'
 
 export const logado = false
 
@@ -22,41 +23,42 @@ export default function Login(){
 
     return(
 
-    <View style={styles.container}>
+        <View style={styles.container}>
 
         <View style={styles.body}>
-            
-            <View>
-            <Text>Login</Text>
-            </View>
-
-            <View style={styles.viewInput}>
-                <Text>Usuário</Text>
-                <TextInput 
-                    style={styles.input}
-                    value={usuario} 
-                    onChangeText={setUsuario}>
-                    
-                </TextInput>
+  
+          <View style={styles.cima}>
+            <Text style={styles.textoTitulo}> Login </Text>
+            <Ionicons name='person-outline' size={55} color={'#ffa500'}/>
+          </View>
+  
+          <View style={styles.meio}>
+  
+            <View style={styles.viewNomeInput}> 
+              <Text>Nome</Text>
+              <Text>Senha</Text>
             </View>
             <View style={styles.viewInput}>
-                <Text>Senha</Text>
-                <TextInput 
-                    style={styles.input} 
-                    value={senha} 
-                    onChangeText={setSenha}>
-                    
-                </TextInput>
+              <TextInput placeholder='Nome' style={styles.input}/>
+              <TextInput placeholder='Senha' style={styles.input}/>
             </View>
-            <TouchableOpacity style={styles.buttonLogar} onPress={() => navigation.navigate('Home')}> 
-            <Text style={{color:'black',fontSize:15,}}>Concluir</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity style={styles.buttonIrParaRegistro} onPress={() => navigation.navigate('Registro')}> 
-            <Text>Fazer Registro</Text>
-            </TouchableOpacity>
+  
+          </View>
+  
+          <View style={styles.baixo}>
+          <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.botaoAdd}>
+            <Text>Logar</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Registro')} style={styles.botaoTrc}>
+            <Text>Registro</Text>
+          </TouchableOpacity>
+          </View>
         </View>
-    </View>
+        
+        <View style={styles.footer}>
+        </View>
+
+      </View>
         
     
     

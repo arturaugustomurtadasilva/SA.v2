@@ -1,9 +1,10 @@
 
 import { useNavigation } from "@react-navigation/native";
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TextInput, View,TouchableOpacity } from 'react-native';
+import { Text, TextInput, View,TouchableOpacity } from 'react-native';
 import { styles } from './styles'
 import { useState } from 'react';
+import { Ionicons } from '@expo/vector-icons'
 
 export default function Registro() {
 
@@ -42,98 +43,46 @@ const navigation = useNavigation();
   return (
     <View style={styles.container}>
 
+      <View style={styles.body}>
 
-        <View style={styles.body}>
-
-            <View style={{margin:10}}>
-                <Text style={{fontSize:30}}>Registro</Text>
-
-            </View>
-            
-                <View style={styles.viewInput}>
-                    <Text>Nome:</Text>
-                    <TextInput 
-                        style={styles.input} 
-                        value={nome} 
-                        onChangeText={setNome}
-                    >
-                        
-                    </TextInput>
-                </View>
-                <View style={styles.viewInput}>
-                    <Text>Sobrenome:</Text>
-                    <TextInput 
-                        style={styles.input}
-                        value={sobrenome} 
-                        onChangeText={setSobrenome}
-                        >
-                        
-                    </TextInput>
-                </View>
-                
-                <View style={styles.viewInput}>
-                    <Text>Email:</Text>
-                    <TextInput 
-                        style={styles.input}
-                        value={email} 
-                        onChangeText={setEmail}
-                    >
-                        
-                    </TextInput>
-                </View>
-                
-                <View style={styles.viewInput}>
-                    <Text>CPF:</Text>
-                    <TextInput 
-                        style={styles.input}
-                        value={cpf} 
-                        onChangeText={setCpf}
-                    >
-                        
-                    </TextInput>
-                </View>
-                
-                <View style={styles.viewInput}>
-                    <Text>Telefone:</Text>
-                    <TextInput 
-                        style={styles.input}
-                        value={telefone} 
-                        onChangeText={setTelefone}
-                    >
-                        
-                    </TextInput>
-                </View>
-                
-                <View style={styles.viewInput}>
-                    <Text>Senha:</Text>
-                    <TextInput 
-                        style={styles.input}
-                        value={senha} 
-                        onChangeText={setSenha}
-                        >
-                            
-                    </TextInput>
-                </View>
-                
-                <View style={styles.viewInput}>
-                    <Text>Confirmar Senha:</Text>
-                    <TextInput 
-                        style={styles.input}
-                        value={confirmarSenha} 
-                        onChangeText={setConfirmarSenha}
-                        >
-                            
-                    </TextInput>
-                </View>
-                <TouchableOpacity style={styles.buttonRegistrar} onPress={() => functionCombined()}> 
-                <Text style={{color:'black',fontSize:15,}}>Concluir</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.buttonIrParaLogin} onPress={() => navigation.navigate('Login')} > 
-                <Text>Fazer Login</Text>
-                </TouchableOpacity>
+        <View style={styles.cima}>
+          <Text style={styles.textoTitulo}> Registro </Text>
+          <Ionicons name='person-outline' size={55} color={'#ffa500'}/>
         </View>
-    
+
+        <View style={styles.meio}>
+
+          <View style={styles.viewNomeInput}> 
+            <Text>Nome</Text>
+            <Text>Sobrenome</Text>
+            <Text>Email</Text>
+            <Text>CPF</Text>
+            <Text>Senha</Text>
+          </View>
+          <View style={styles.viewInput}>
+            <TextInput placeholder='Nome' style={styles.input}/>
+            <TextInput placeholder='Sobrenome' style={styles.input}/>
+            <TextInput placeholder='Email' style={styles.input}/>
+            <TextInput placeholder='CPF' style={styles.input}/>
+            <TextInput placeholder='Senha' style={styles.input}/>
+          </View>
+
+        </View>
+
+        <View style={styles.baixo}>
+        <TouchableOpacity style={styles.botaoAdd} onPress={() => navigation.navigate('Login')}>
+          <Text>Registrar</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.botaoTrc} onPress={() => navigation.navigate('Login')}>
+          <Text>Logar</Text>
+        </TouchableOpacity>
+        </View>
+      </View>
+      
+      <View style={styles.footer}>
+      </View>
+  
+      <StatusBar style="auto" />
     </View>
   );
 }

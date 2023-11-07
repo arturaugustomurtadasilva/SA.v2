@@ -38,7 +38,7 @@ export default function Cadastro() {
             
           </View>
           <View style={styles.viewInput}>
-            <TextInput placeholder='Titulo' style={styles.input}/>
+            <TextInput placeholder='Título' style={styles.input}/>
             <TextInput placeholder='Gênero' style={styles.input}/>
             <TextInput placeholder='Vagas' style={styles.input}/>
             <TextInput placeholder='Desconto' style={styles.input}/>
