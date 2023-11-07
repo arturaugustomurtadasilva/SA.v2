@@ -3,68 +3,89 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
     container: {
       flex: 1,
-      alignItems: 'center',
-      justifyContent: 'flex-start',
-      backgroundColor:'#ffa500'
-      
-    },
-    viewTitulo: {
-      height:'10%',
-      width:'100%',
-      alignItems:'center',
-      justifyContent:'center',
-      
-    },
-    textTitle: {
-      fontSize:30,
-    },
-    viewInputsGeral:{
-      height:'90%',
-      width:'100%',
+      backgroundColor: '#ffa500',
       alignItems: 'center',
       justifyContent: 'flex-start',
       
-    },
-    viewInput:{
-      height:'10%',
-      width:'100%',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-    textInput:{
-      fontSize:19,
-  
-    },
-    input:{
-      borderWidth :1,
-      borderColor:'#b87e14',
-      height:'45%',
-      width:'55%',
-      borderRadius: 5,
-      textAlign: 'center',
     },
     body:{
       width:'85%',
       height:'80%',
       backgroundColor:'white',
-      borderRadius:25,
-      marginTop:50,
       borderColor:'black',
       borderWidth:1,
-    },
-    buttonLista:{
-      marginTop:30,
       alignItems:'center',
       justifyContent:'center',
-      borderWidth:1,
-      borderColor:'#ffa500',
-      width:'40%',
-      height:'9%',
-      borderRadius:5,
-      textAlign:'center'
+      borderRadius:25,
+      marginTop:50,
     },
-    textoButton:{
-      textAlign:'center'
+    cima:{
+      width:'100%',
+      height: '20%',
+      alignItems:'center',
+      justifyContent:'center',
+    },
+    textoTitulo:{
+      fontSize:25,
+    },
+    meio:{
+      width:'100%',
+      height: '60%',
+      alignItems:'flex-start',
+      justifyContent:'space-around',
+      flexDirection:'row',
+    },
+    viewNomeInput:{
+      alignItems:'center',
+      justifyContent:'center',
+      gap:38,
+      width:'25%',
+      height:'100%',
+      marginTop:10,
+    },
+    viewInput:{
+      alignItems:'center',
+      justifyContent:'center',
+      width:'75%',
+      height:'100%',
+    },
+    input:{
+      width:'80%',
+      height: '10%',
+      textAlign:'center',
+      borderBottomWidth:0.5,
+      margin:5,
+    },
+    baixo:{
+      width:'100%',
+      height: '20%',
+      alignItems:'center',
+      justifyContent:'space-evenly',
+      flexDirection:'row',
+    },
+    btnCriar:{
+      height:'25%',
+      width:'30%',
+      borderWidth:1,
+      borderRadius:10,
+      backgroundColor:'#f5f5dc',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    botaoAdd:{
+      height:'25%',
+      width:'30%',
+      borderWidth:1,
+      borderRadius:10,
+      backgroundColor:'#f5f5dc',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    footer:{
+      width:'100%',
+      height:'15%',
+    },
+    textoH1:{
+      fontSize:20,
     },
   });
-  

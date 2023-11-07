@@ -4,6 +4,7 @@ import {Picker} from '@react-native-picker/picker';
 import { styles } from './styles'
 import { useState } from 'react';
 import { TouchableOpacity } from 'react-native';
+import { Ionicons } from '@expo/vector-icons'
 
 export default function Cadastro() {
   const [titulo, setTitulo] = useState('')
@@ -13,72 +14,50 @@ export default function Cadastro() {
 
   function addLista(){
     const listaTemp = {
-
+      
     }
   }
 
-
   return (
     <View style={styles.container}>
+
       <View style={styles.body}>
 
-        <View style={styles.viewTitulo}><Text style={styles.textTitle}>Cadastre sua lista</Text></View>
-        
-        <View style={styles.viewInputsGeral}>
+        <View style={styles.cima}>
+          <Text style={styles.textoTitulo}> Cadastro de Lista </Text>
+          <Ionicons name='create-outline' size={55} color={'#ffa500'}/>
+        </View>
 
+        <View style={styles.meio}>
+
+          <View style={styles.viewNomeInput}> 
+            <Text>Título</Text>
+            <Text>Gênero</Text>
+            <Text>Vagas</Text>
+            <Text>Desconto</Text>
+            
+          </View>
           <View style={styles.viewInput}>
-                <Text style={styles.textInput}>Título da lista</Text>
-                <TextInput
-                style={styles.input}
-                value={titulo}
-                onChangeText={setTitulo}
-                >
-                    
-                </TextInput>
-            </View>
-            <View style={styles.viewInput}>
-                <Text style={styles.textInput}>Gênero</Text>
-                  <TextInput 
-                    style={styles.input}
-                    value={genero}
-                    onChangeText={setGenero}
-                  >
-                    
-                  </TextInput>
-            </View>
-            <View style={styles.viewInput}>
-                <Text style={styles.textInput}>Tamanho da lista</Text>
-                  <TextInput 
-                    style={styles.input}
-                    value={tamanhoLista}
-                    onChangeText={setTamanhoLista}
-                    >
-                    
-                  </TextInput>
-            </View>
-            <View style={styles.viewInput}>
-                <Text style={styles.textInput}>desconto desejado</Text>
-                  <TextInput 
-                    style={styles.input}
-                    value={desconto}
-                    onChangeText={setDesconto}
-                    >
-                    
-                  </TextInput>
-                  
-            </View>
+            <TextInput placeholder='Titulo' style={styles.input}/>
+            <TextInput placeholder='Gênero' style={styles.input}/>
+            <TextInput placeholder='Vagas' style={styles.input}/>
+            <TextInput placeholder='Desconto' style={styles.input}/>
             
-              <TouchableOpacity style={styles.buttonLista} onPress={addLista}>
-                <Text style={styles.textoButton}>
-                  addLista
-                </Text>
-              </TouchableOpacity>
-            
+          </View>
+
+        </View>
+
+        <View style={styles.baixo}>
+          <TouchableOpacity style={styles.btnCriar}>
+            <Text>Criar</Text>
+          </TouchableOpacity>
         </View>
       </View>
-
       
-
+      <View style={styles.footer}>
+      </View>
+  
+      <StatusBar style="auto" />
     </View>
   );
 }

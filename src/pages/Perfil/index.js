@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity, Image, TextInput } from 'react-native';
 import { styles } from './styles'
-import FontAwesome from "@expo/vector-icons/FontAwesome";
+import { Ionicons } from '@expo/vector-icons'
 import { useState } from 'react';
 import { useNavigation } from "@react-navigation/native";
 
@@ -12,91 +12,46 @@ export default function Perfil() {
   return (
     <View style={styles.container}>
 
-      <View style={styles.header}>
-        <View style={styles.textoDePefil}>
-          <Text style={styles.textoH1}>Perfil</Text>
-        </View>
-      </View>
       <View style={styles.body}>
-        <View style={styles.parteCima}>
-          <View style={styles.logUm}>
-            <FontAwesome
-            name='user'
-            size={90}
-            color='black'
-          />
-          </View>
-          <View style={styles.tituloH1}>
-            <Text style={styles.escritoH2}>Informações pessoais</Text>
-          </View>
+
+        <View style={styles.cima}>
+          <Text style={styles.textoTitulo}> Meu Perfil </Text>
+          <Ionicons name='person-outline' size={55} color={'#ffa500'}/>
         </View>
+
         <View style={styles.meio}>
-          <View style={styles.linhas}>
-            <View style={styles.viewTextTipo}>
-              <Text style={styles.textoTipo}>Nome:</Text>
-            </View>
-            <View style={styles.viewInpt}>
-              <TextInput style={styles.input} placeholder='Alexandros'>
-              
-              </TextInput>
-            </View>
-          </View>
-          <View style={styles.linhas}>
-            <View style={styles.viewTextTipo}>
-              <Text style={styles.textoTipo}>CPF:</Text>
-            </View>
-            <View style={styles.viewInpt}>
-              <TextInput style={styles.input} placeholder='2222222-22'>
-              
-              </TextInput>
-            </View>
-          </View>
-          <View style={styles.linhas}>
-            <View style={styles.viewTextTipo}>
-              <Text style={styles.textoTipo}>Endereço:</Text>
-            </View>
-            <View style={styles.viewInpt}>
-              <TextInput style={styles.input} placeholder='Rua do Senai 1673'>
-              
-              </TextInput>
-            </View>
-          </View>
-          <View style={styles.linhas}>
-            <View style={styles.viewTextTipo}>
-              <Text style={styles.textoTipo}>Telefone:</Text>
-            </View>
-            <View style={styles.viewInpt}>
-              <TextInput style={styles.input} placeholder='489846969'>
 
-              </TextInput>
-            </View>
+          <View style={styles.viewNomeInput}> 
+            <Text>Nome</Text>
+            <Text>Sobrenome</Text>
+            <Text>Email</Text>
+            <Text>CPF</Text>
+            <Text>Senha</Text>
           </View>
-          <View style={styles.linhas}>
-            <View style={styles.viewTextTipo}>
-              <Text style={styles.textoTipo}>E-mail:</Text>
-            </View>
-            <View style={styles.viewInpt}>
-              <TextInput style={styles.input} placeholder='elefantePreto@gmail.com'>
-              
-              </TextInput>
-            </View>
+          <View style={styles.viewInput}>
+            <TextInput placeholder='Nome' style={styles.input}/>
+            <TextInput placeholder='Sobrenome' style={styles.input}/>
+            <TextInput placeholder='Email' style={styles.input}/>
+            <TextInput placeholder='CPF' style={styles.input}/>
+            <TextInput placeholder='Senha' style={styles.input}/>
           </View>
+
         </View>
+
         <View style={styles.baixo}>
-          
-            <TouchableOpacity style={styles.botaoAdd}>
-              <Text>EDITAR DADOS</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('ListasSalvas')} style={styles.botaoAdd}>
-              <Text>MINHAS LISTAS</Text>
-            </TouchableOpacity>
-
+        <TouchableOpacity style={styles.botaoAdd}>
+          <Text>EDITAR DADOS</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('ListasSalvas')} style={styles.botaoAdd}>
+          <Text>MINHAS LISTAS</Text>
+        </TouchableOpacity>
         </View>
       </View>
+      
       <View style={styles.footer}>
-
       </View>
-    <StatusBar style="auto" />
+  
+      <StatusBar style="auto" />
     </View>
     
   );

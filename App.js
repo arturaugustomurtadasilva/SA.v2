@@ -24,7 +24,7 @@ export default function App() {
         <Stack.Screen options={{headerShown:false,}} name="Inicio" component={Inicio}/>
         <Stack.Screen options={{headerShown:false,}} name="Login" component={Login}/>
         <Stack.Screen options={{headerShown:false,}} name="Registro" component={Registro}/>
-        <Stack.Screen options={{headerShown:true,}} name="Listas Salvas" component={ListasSalvas}/>
+        <Stack.Screen options={{headerShown:true,}} name="ListasSalvas" component={ListasSalvas}/>
         <Stack.Screen options={{headerShown:false,}} name="Home" component={Home}/>
       </Stack.Navigator>
     </NavigationContainer>
