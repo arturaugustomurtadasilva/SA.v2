@@ -38,10 +38,10 @@ export default function Cadastro() {
             
           </View>
           <View style={styles.viewInput}>
-            <TextInput placeholder='Título' style={styles.input}/>
-            <TextInput placeholder='Gênero' style={styles.input}/>
-            <TextInput placeholder='Vagas' style={styles.input}/>
-            <TextInput placeholder='Desconto' style={styles.input}/>
+            <TextInput value={titulo} onChangeText={setTitulo} placeholder='Título' style={styles.input}/>
+            <TextInput value={genero} onChangeText={setGenero} placeholder='Gênero' style={styles.input}/>
+            <TextInput value={tamanhoLista} onChangeText={setTamanhoLista} placeholder='Vagas' style={styles.input}/>
+            <TextInput value={desconto} onChangeText={setDesconto} placeholder='Desconto' style={styles.input}/>
             
           </View>
 

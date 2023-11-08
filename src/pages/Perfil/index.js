@@ -9,6 +9,12 @@ export default function Perfil() {
 
   const navigation = useNavigation();
 
+  const [nome, setNome] = useState('')
+  const [sobrenome, setSobrenome] = useState('')
+  const [email, setEmail] = useState('')
+  const [cpf, setCpf] = useState('')
+  const [senha, setSenha] = useState('')
+
   return (
     <View style={styles.container}>
 
@@ -29,11 +35,11 @@ export default function Perfil() {
             <Text>Senha</Text>
           </View>
           <View style={styles.viewInput}>
-            <TextInput placeholder='Nome' style={styles.input}/>
-            <TextInput placeholder='Sobrenome' style={styles.input}/>
-            <TextInput placeholder='Email' style={styles.input}/>
-            <TextInput placeholder='CPF' style={styles.input}/>
-            <TextInput placeholder='Senha' style={styles.input}/>
+            <TextInput value={nome} onChangeText={setNome} placeholder='Nome' style={styles.input}/>
+            <TextInput value={sobrenome} onChangeText={setSobrenome} placeholder='Sobrenome' style={styles.input}/>
+            <TextInput value={email} onChangeText={setEmail} placeholder='Email' style={styles.input}/>
+            <TextInput value={cpf} onChangeText={setCpf} placeholder='CPF' style={styles.input}/>
+            <TextInput value={senha} onChangeText={setSenha} placeholder='Senha' style={styles.input}/>
           </View>
 
         </View>

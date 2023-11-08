@@ -24,7 +24,7 @@ const Carrossel = () => {
       <Swiper ref={swiperRef}>
         <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
           <Text style={{fontSize: 25,marginBottom:5}}>Bem vindo ao MYBO!</Text>
-          <Text style={{fontSize:18 ,marginBottom:5}}>um app criado para te ajudar a comprar o que você quer,</Text>
+          <Text style={{fontSize:18 ,marginBottom:5}}>Um app criado para te ajudar a comprar o que você quer,</Text>
           <Text style={{fontSize:18}}>mas de um jeito diferente, deixa eu te mostrar!</Text>
         </View>
         <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>

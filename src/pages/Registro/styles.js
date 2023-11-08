@@ -27,7 +27,7 @@ export const styles = StyleSheet.create({
     },
     textoTitulo:{
       fontSize:25,
-    },
+    },  
     meio:{
       width:'100%',
       height: '60%',

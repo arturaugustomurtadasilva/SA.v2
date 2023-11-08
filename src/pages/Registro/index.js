@@ -8,13 +8,12 @@ import { Ionicons } from '@expo/vector-icons'
 
 export default function Registro() {
 
-const navigation = useNavigation();
+  const navigation = useNavigation();
 
   const [nome, setNome] = useState('')
   const [sobrenome, setSobrenome] = useState('')
   const [email, setEmail] = useState('')
   const [cpf, setCpf] = useState('')
-  const [telefone, setTelefone] = useState('')
   const [senha, setSenha] = useState('')
   const [confirmarSenha, setConfirmarSenha] = useState('')
   let usuarios = []
@@ -25,7 +24,6 @@ const navigation = useNavigation();
             sobrenome: sobrenome,
             email: email,
             cpf: cpf,
-            telefone: telefone,
             senha: senha
         }
         usuarios.push(usuarioTemp)
@@ -58,13 +56,15 @@ const navigation = useNavigation();
             <Text>Email</Text>
             <Text>CPF</Text>
             <Text>Senha</Text>
+            <Text>Confirmar senha</Text>
           </View>
           <View style={styles.viewInput}>
-            <TextInput placeholder='Nome' style={styles.input}/>
-            <TextInput placeholder='Sobrenome' style={styles.input}/>
-            <TextInput placeholder='Email' style={styles.input}/>
-            <TextInput placeholder='CPF' style={styles.input}/>
-            <TextInput placeholder='Senha' style={styles.input}/>
+            <TextInput value={nome} onChangeText={setNome} placeholder='Nome' style={styles.input}/>
+            <TextInput value={sobrenome} onChangeText={setSobrenome} placeholder='Sobrenome' style={styles.input}/>
+            <TextInput value={email} onChangeText={setEmail} placeholder='Email' style={styles.input}/>
+            <TextInput value={cpf} onChangeText={setCpf} placeholder='CPF' style={styles.input}/>
+            <TextInput value={senha} onChangeText={setSenha} placeholder='Senha' style={styles.input}/>
+            <TextInput value={confirmarSenha} onChangeText={setConfirmarSenha} placeholder='Senha' style={styles.input}/>
           </View>
 
         </View>

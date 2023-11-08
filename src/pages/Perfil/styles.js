@@ -24,6 +24,7 @@ export const styles = StyleSheet.create({
       height: '20%',
       alignItems:'center',
       justifyContent:'center',
+      gap:15,
     },
     textoTitulo:{
       fontSize:25,

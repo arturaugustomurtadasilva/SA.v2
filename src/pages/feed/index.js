@@ -11,7 +11,7 @@ export default function Feed() {
       <View style={styles.body}>
         <View style={styles.viewTitulo}>
           <Text style={styles.textTitle}>
-            Listas Disponíveis
+            Listas
           </Text>
         </View>
         <View style={styles.viewFeed}>

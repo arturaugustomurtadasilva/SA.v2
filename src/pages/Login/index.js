@@ -39,8 +39,8 @@ export default function Login(){
               <Text>Senha</Text>
             </View>
             <View style={styles.viewInput}>
-              <TextInput placeholder='Nome' style={styles.input}/>
-              <TextInput placeholder='Senha' style={styles.input}/>
+              <TextInput value={usuario} onChangeText={setUsuario} placeholder='Nome' style={styles.input}/>
+              <TextInput value={senha} onChangeText={setSenha} placeholder='Senha' style={styles.input}/>
             </View>
   
           </View>

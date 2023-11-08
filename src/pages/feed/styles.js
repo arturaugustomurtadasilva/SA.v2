@@ -57,7 +57,7 @@ export const styles = StyleSheet.create({
 
     },
     textTitle:{
-      fontSize:20,
+      fontSize:25,
   
     },
     
