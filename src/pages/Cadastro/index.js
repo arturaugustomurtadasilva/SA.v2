@@ -7,15 +7,29 @@ import { TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'
 
 export default function Cadastro() {
+
   const [titulo, setTitulo] = useState('')
   const [genero, setGenero] = useState('')
   const [tamanhoLista, setTamanhoLista] = useState('')
   const [desconto, setDesconto] = useState('')
 
   function addLista(){
+    const listas = []
+
     const listaTemp = {
-      
+      titulo:  titulo,
+      genero: genero,
+      tamanhoLista: tamanhoLista,
+      desconto: desconto,
     }
+
+    listas.push(listaTemp)
+
+    console.log(listas)
+  }
+
+  function feed(){
+    
   }
 
   return (
@@ -48,7 +62,7 @@ export default function Cadastro() {
         </View>
 
         <View style={styles.baixo}>
-          <TouchableOpacity style={styles.btnCriar}>
+          <TouchableOpacity style={styles.btnCriar} onPress={addLista}>
             <Text>Criar</Text>
           </TouchableOpacity>
         </View>

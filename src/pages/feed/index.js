@@ -2,9 +2,13 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, TextInput, View,TouchableOpacity } from 'react-native';
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { styles } from './styles'
+import FeedItem from '../../components/FeedItem/index';
 
 
 export default function Feed() {
+
+  const nomes = ['a', 'b', 'c', 'd', 'e',];
+
   return (
     <View style={styles.container}>
 
@@ -15,7 +19,14 @@ export default function Feed() {
           </Text>
         </View>
         <View style={styles.viewFeed}>
-          <View style={styles.viewLista}>
+
+          <View style={styles.ViewFeedItem}>
+            {nomes.map((nome, index) => (
+            <FeedItem key={index} nome={nome} />
+            ))}
+          </View>
+          
+          {/* <View style={styles.viewLista}>
 
             <View style={styles.viewCimaLista}>
                 <Text>nomeProduto</Text>
@@ -46,7 +57,7 @@ export default function Feed() {
               </TouchableOpacity>
             </View>
 
-          </View>
+          </View> */}
         </View>
 
       </View>

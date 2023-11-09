@@ -24,6 +24,7 @@ export const styles = StyleSheet.create({
       height: '20%',
       alignItems:'center',
       justifyContent:'center',
+      gap:15,
     },
     textoTitulo:{
       fontSize:25,
@@ -64,11 +65,11 @@ export const styles = StyleSheet.create({
       flexDirection:'column',
     },
     botaoAdd:{
-      height:'25%',
-      width:'30%',
+      height:'35%',
+      width:'35%',
       borderWidth:1,
       borderRadius:10,
-      backgroundColor:'#f5f5dc',
+      backgroundColor:'white',
       justifyContent: 'center',
       alignItems: 'center',
     },
@@ -84,5 +85,8 @@ export const styles = StyleSheet.create({
     },
     textoH1:{
       fontSize:20,
+    },
+    textoInput:{
+      fontSize:15,
     },
   });

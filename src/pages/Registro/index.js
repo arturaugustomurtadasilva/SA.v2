@@ -51,20 +51,20 @@ export default function Registro() {
         <View style={styles.meio}>
 
           <View style={styles.viewNomeInput}> 
-            <Text>Nome</Text>
-            <Text>Sobrenome</Text>
-            <Text>Email</Text>
-            <Text>CPF</Text>
-            <Text>Senha</Text>
-            <Text>Confirmar senha</Text>
+            <Text style={styles.textoInput}>Nome</Text>
+            <Text style={styles.textoInput} >Sobrenome</Text>
+            <Text style={styles.textoInput}>Email</Text>
+            <Text style={styles.textoInput}>CPF</Text>
+            <Text style={styles.textoInput}>Senha</Text>
+            <Text style={styles.textoInput}>Confirmar</Text>
           </View>
           <View style={styles.viewInput}>
-            <TextInput value={nome} onChangeText={setNome} placeholder='Nome' style={styles.input}/>
-            <TextInput value={sobrenome} onChangeText={setSobrenome} placeholder='Sobrenome' style={styles.input}/>
-            <TextInput value={email} onChangeText={setEmail} placeholder='Email' style={styles.input}/>
-            <TextInput value={cpf} onChangeText={setCpf} placeholder='CPF' style={styles.input}/>
-            <TextInput value={senha} onChangeText={setSenha} placeholder='Senha' style={styles.input}/>
-            <TextInput value={confirmarSenha} onChangeText={setConfirmarSenha} placeholder='Senha' style={styles.input}/>
+            <TextInput value={nome} onChangeText={setNome} placeholder='Digite seu nome' style={styles.input}/>
+            <TextInput value={sobrenome} onChangeText={setSobrenome} placeholder='Digite seu sobrenome' style={styles.input}/>
+            <TextInput value={email} onChangeText={setEmail} placeholder='Digite seu email' style={styles.input}/>
+            <TextInput value={cpf} onChangeText={setCpf} placeholder='Digite seu CPF' style={styles.input}/>
+            <TextInput value={senha} onChangeText={setSenha} placeholder='Digite sua senha' style={styles.input}/>
+            <TextInput value={confirmarSenha} onChangeText={setConfirmarSenha} placeholder='Confirme sua senha' style={styles.input}/>
           </View>
 
         </View>

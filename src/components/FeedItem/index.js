@@ -1,4 +1,46 @@
+import React from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
 import { StyleSheet } from 'react-native';
+import FontAwesome from "@expo/vector-icons/FontAwesome";
+
+const FeedItem = ({ nome }) => {
+  return (
+    <View style={styles.viewLista}>
+
+            <View style={styles.viewCimaLista}>
+                <Text>{nome}</Text>
+                <View style={{flexDirection:'row',alignItems:'center', justifyContent:'center',gap:5}}>
+                <FontAwesome 
+                name='user'
+                size={20} 
+                color={'#ffa500'} 
+                />
+                <Text>0/xxx</Text>
+                </View>
+            </View>
+
+            <View style={styles.viewBaixoLista}> 
+              <TouchableOpacity>
+              <FontAwesome 
+                name='plus'
+                size={25} 
+                color={'#ffa500'} 
+              />
+              </TouchableOpacity>
+              <TouchableOpacity>
+              <FontAwesome 
+                name='star'
+                size={25} 
+                color={'#ffa500'} 
+                  />
+              </TouchableOpacity>
+            </View>
+
+    </View> 
+  );
+};
+
+export default FeedItem;
 
 export const styles = StyleSheet.create({
     container: {
@@ -22,8 +64,8 @@ export const styles = StyleSheet.create({
       justifyContent: 'flex-start',
     },
     viewLista:{
-      width:'65%',
-      height:'15%',
+      width:'100%',
+      height:'18%',
       borderColor:'black',
       borderWidth:1,
       justifyContent:'space-between',
@@ -60,9 +102,5 @@ export const styles = StyleSheet.create({
       fontSize:25,
   
     },
-    ViewFeedItem:{
-      flex:1,
-      width:'80%'
-    }
     
   });

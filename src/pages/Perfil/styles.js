@@ -65,8 +65,8 @@ export const styles = StyleSheet.create({
       flexDirection:'row',
     },
     botaoAdd:{
-      height:'25%',
-      width:'30%',
+      height:'35%',
+      width:'35%',
       borderWidth:1,
       borderRadius:5,
       backgroundColor:'white',
