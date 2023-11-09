@@ -1,7 +1,7 @@
 
 import { useNavigation } from "@react-navigation/native";
 import { StatusBar } from 'expo-status-bar';
-import { Text, TextInput, View,TouchableOpacity } from 'react-native';
+import { Text, TextInput, View,TouchableOpacity,TouchableHighlight } from 'react-native';
 import { styles } from './styles'
 import { useState } from 'react';
 import { Ionicons } from '@expo/vector-icons'

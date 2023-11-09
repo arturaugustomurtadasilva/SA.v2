@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
       
     },
     body:{
-      width:'85%',
+      width:'90%',
       height:'80%',
       backgroundColor:'white',
       borderColor:'black',

@@ -1,6 +1,5 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
-
 import Feed from './pages/Feed'
 import Cadastro from './pages/Cadastro'
 import Perfil from './pages/Perfil'

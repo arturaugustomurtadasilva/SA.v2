@@ -62,7 +62,7 @@ export default function Cadastro() {
         </View>
 
         <View style={styles.baixo}>
-          <TouchableOpacity style={styles.btnCriar} onPress={addLista}>
+          <TouchableOpacity style={styles.btnCriar} >
             <Text>Criar</Text>
           </TouchableOpacity>
         </View>
