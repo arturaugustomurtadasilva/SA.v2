@@ -1,27 +1,44 @@
-
-import { Text, View, TouchableOpacity,TextInput } from 'react-native';
-import { styles } from './styles'
-import { Ionicons } from '@expo/vector-icons'
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { Text, View, TouchableOpacity } from 'react-native';
+import { styles } from './styles';
+import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from "@react-navigation/native";
+import ConfirmacaoExclusao from '../../components/ModalConfirmacao';
 
-export default function Perfil() {
-
+export default function Opcoes() {
   const navigation = useNavigation();
+  const [modalVisible, setModalVisible] = useState(false);
+
+  const handleExcluirConta = () => {
+    setModalVisible(true);
+  };
+
+  const handleConfirmarExclusao = (senha) => {
+    // Lógica para confirmar a exclusão com a senha
+    console.log('Senha digitada:', senha);
+
+    // Fechar o modal após a confirmação
+    setModalVisible(false);
+  };
 
   return (
     <View style={styles.container}>
-        <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Perfil')}>
-            <Text>Editar dados</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Login')}>
-            <Text>Sair</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Registro')}>
-            <Text>Excluir conta</Text>
-        </TouchableOpacity>
+      <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Perfil')}>
+        <Text>Editar dados</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Login')}>
+        <Text>Sair</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.btn} onPress={handleExcluirConta}>
+        <Text>Excluir conta</Text>
+      </TouchableOpacity>
+
+      {/* Modal de confirmação de exclusão */}
+      <ConfirmacaoExclusao
+        visible={modalVisible}
+        onClose={() => setModalVisible(false)}
+        onConfirm={handleConfirmarExclusao}
+      />
     </View>
-    
   );
 }
-

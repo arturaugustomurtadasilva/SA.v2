@@ -14,17 +14,9 @@ export default function Login(){
     const [usuario,setUsuario] = useState()
     const [senha,setSenha] = useState()
 
-    function login() {
-        const UsuarioLog = {
-            usuario: usuario,
-            senha: senha,
-        }
-    }
-
     return(
 
         <View style={styles.container}>
-
         <View style={styles.body}>
   
           <View style={styles.cima}>

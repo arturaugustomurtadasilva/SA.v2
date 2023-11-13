@@ -9,15 +9,15 @@ export const styles = StyleSheet.create({
       
     },
     body:{
-      width:'85%',
-      height:'80%',
+      width:'90%',
+      height:'90%',
       backgroundColor:'white',
       borderColor:'black',
       borderWidth:1,
       alignItems:'center',
       justifyContent:'center',
       borderRadius:25,
-      marginTop:100,
+      marginTop:50,
     },
     cima:{
       width:'100%',
