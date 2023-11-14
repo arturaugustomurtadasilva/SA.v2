@@ -18,25 +18,28 @@ export default function Login(){
 
         <View style={styles.container}>
         <View style={styles.body}>
-  
           <View style={styles.cima}>
             <Text style={styles.textoTitulo}> Login </Text>
             <Ionicons name='person-outline' size={55} color={'#ffa500'}/>
           </View>
-  
           <View style={styles.meio}>
-  
             <View style={styles.viewNomeInput}> 
-              <Text>Nome</Text>
-              <Text>Senha</Text>
+              <View style={styles.viewNome}>
+                <Text>Usuario</Text> 
+              </View>
+              <View style={styles.viewInput}>
+                <TextInput value={usuario} onChangeText={setUsuario} placeholder='Usuario' style={styles.input}/>
+              </View>
             </View>
-            <View style={styles.viewInput}>
-              <TextInput value={usuario} onChangeText={setUsuario} placeholder='Nome' style={styles.input}/>
-              <TextInput value={senha} onChangeText={setSenha} placeholder='Senha' style={styles.input}/>
+            <View style={styles.viewNomeInput}> 
+              <View style={styles.viewNome}>
+                <Text>Senha</Text>
+              </View>
+              <View style={styles.viewInput}>
+                <TextInput value={senha} onChangeText={setSenha} placeholder='Senha' style={styles.input}/>
+              </View>
             </View>
-  
           </View>
-  
           <View style={styles.baixo}>
           <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.botaoAdd}>
             <Text>Logar</Text>
@@ -46,7 +49,6 @@ export default function Login(){
           </TouchableOpacity>
           </View>
         </View>
-        
         <View style={styles.footer}>
         </View>
 

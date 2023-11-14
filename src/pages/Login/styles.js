@@ -32,30 +32,35 @@ export const styles = StyleSheet.create({
     meio:{
       width:'100%',
       height: '60%',
-      alignItems:'flex-start',
-      justifyContent:'space-around',
-      flexDirection:'row',
+      alignItems:'center',
+      justifyContent:'center',
+      flexDirection:'column',
     },
     viewNomeInput:{
       alignItems:'center',
       justifyContent:'center',
-      gap:38,
-      width:'25%',
-      height:'100%',
-      marginTop:10,
+      width:'100%',
+      height:'15%',
+      flexDirection:'row'
     },
     viewInput:{
       alignItems:'center',
       justifyContent:'center',
-      width:'75%',
+      width:'60%',
+      height:'100%',
+    },
+    viewNome:{
+      alignItems:'center',
+      justifyContent:'center',
+      width:'40%',
       height:'100%',
     },
     input:{
       width:'80%',
-      height: '10%',
+      height: '100%',
       textAlign:'center',
       borderBottomWidth:0.5,
-      margin:5,
+      
     },
     baixo:{
       width:'100%',

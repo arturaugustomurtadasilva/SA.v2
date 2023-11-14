@@ -26,20 +26,45 @@ export default function Perfil() {
         </View>
 
         <View style={styles.meio}>
-
           <View style={styles.viewNomeInput}> 
-            <Text>Nome</Text>
-            <Text>Sobrenome</Text>
-            <Text>Email</Text>
-            <Text>CPF</Text>
-            <Text>Senha</Text>
+            <View style={styles.viewNome}>
+              <Text>Nome</Text> 
+            </View>
+            <View style={styles.viewInput}>
+              <TextInput value={nome} onChangeText={setNome} placeholder='Nome' style={styles.input}/>
+            </View>
           </View>
-          <View style={styles.viewInput}>
-            <TextInput value={nome} onChangeText={setNome} placeholder='Nome' style={styles.input}/>
-            <TextInput value={sobrenome} onChangeText={setSobrenome} placeholder='Sobrenome' style={styles.input}/>
-            <TextInput value={email} onChangeText={setEmail} placeholder='Email' style={styles.input}/>
-            <TextInput value={cpf} onChangeText={setCpf} placeholder='CPF' style={styles.input}/>
-            <TextInput value={senha} onChangeText={setSenha} placeholder='Senha' style={styles.input}/>
+          <View style={styles.viewNomeInput}> 
+            <View style={styles.viewNome}>
+              <Text>Sobrenome</Text>
+            </View>
+            <View style={styles.viewInput}>
+              <TextInput value={sobrenome} onChangeText={setSobrenome} placeholder='Sobrenome' style={styles.input}/>
+            </View>
+          </View>
+          <View style={styles.viewNomeInput}> 
+            <View style={styles.viewNome}>
+              <Text>Email</Text>
+            </View>
+            <View style={styles.viewInput}>
+              <TextInput value={email} onChangeText={setEmail} placeholder='Email' style={styles.input}/>
+            </View>
+          </View>
+          <View style={styles.viewNomeInput}> 
+            <View style={styles.viewNome}>
+              <Text>CPF</Text>
+            </View>
+            <View style={styles.viewInput}>
+              <TextInput value={cpf} onChangeText={setCpf} placeholder='CPF' style={styles.input}/>
+            </View>
+          </View>
+          <View style={styles.viewNomeInput}> 
+            <View style={styles.viewNome}>
+              <Text>Senha</Text>
+            </View>
+            <View style={styles.viewInput}>
+              <TextInput value={senha} onChangeText={setSenha} placeholder='Senha' style={styles.input}/>
+            </View>
           </View>
 
         </View>

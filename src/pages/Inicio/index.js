@@ -5,7 +5,7 @@ import { styles } from './styles.js'
 import { useNavigation } from "@react-navigation/native";
 import { Ionicons } from '@expo/vector-icons'
 
-import Carrossel from '../../components/Carrossel'
+
 
 export default function Inicio() {
 
@@ -28,7 +28,7 @@ export default function Inicio() {
         </View> 
 
         <View style={styles.viewMeio}>
-            <Carrossel/>
+            
         </View> 
 
         <View style={styles.viewBaixo}>

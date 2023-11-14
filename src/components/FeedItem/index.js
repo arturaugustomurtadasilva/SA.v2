@@ -15,7 +15,6 @@ const FeedItem = ({ nome, onFavoritar }) => {
 
   return (
     <View style={styles.viewLista}>
-
             <View style={styles.viewCimaLista}>
                 <Text>{nome}</Text>
                 <View style={{flexDirection:'row',alignItems:'center', justifyContent:'center',gap:5,}}>
@@ -44,7 +43,6 @@ const FeedItem = ({ nome, onFavoritar }) => {
                   />
               </TouchableOpacity>
             </View>
-
     </View> 
   );
 };

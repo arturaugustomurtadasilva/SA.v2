@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
-import FontAwesome from "@expo/vector-icons/FontAwesome";
+import {  Text, View, ScrollView } from 'react-native';
 import { styles } from './styles';
 import FeedItem from '../../components/FeedItem/index';
 
@@ -27,10 +26,15 @@ export default function Feed() {
         </View>
 
         {/* Utilize o ScrollView para tornar a viewFeed rolável */}
-        <ScrollView style={styles.viewFeedItem} showsVerticalScrollIndicator={false}>
-          {nomes.map((nome, index) => (
-            <FeedItem key={index} nome={nome} onFavoritar={handleFavoritar} />
-          ))}
+        <ScrollView 
+          style={styles.viewFeedItem}
+          showsVerticalScrollIndicator={false}
+          >
+          <View>
+            {nomes.map((nome, index) => (
+              <FeedItem key={index} nome={nome} onFavoritar={handleFavoritar} />
+            ))}
+          </View>
           <View style={{ height: '10%' }}></View>
         </ScrollView>
       </View>

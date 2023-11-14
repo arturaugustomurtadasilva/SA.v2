@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
-import { StatusBar, Text, TextInput, View, TouchableOpacity, Alert } from 'react-native';
+import { Text, TextInput, View, TouchableOpacity, Modal, Alert } from 'react-native';
 import { styles } from './styles';
+import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-import { Ionicons } from '@expo/vector-icons'
 
-export default function Registro() {
+const Registro = () => {
   const navigation = useNavigation();
+
   const [nome, setNome] = useState('');
   const [sobrenome, setSobrenome] = useState('');
   const [email, setEmail] = useState('');
   const [cpf, setCpf] = useState('');
   const [senha, setSenha] = useState('');
   const [confirmarSenha, setConfirmarSenha] = useState('');
+  const [modalVisible, setModalVisible] = useState(false);
+
   const [nomeValido, setNomeValido] = useState(false);
   const [sobrenomeValido, setSobrenomeValido] = useState(false);
   const [emailValido, setEmailValido] = useState(false);
@@ -19,131 +22,186 @@ export default function Registro() {
   const [senhaValida, setSenhaValida] = useState(false);
   const [confirmarSenhaValida, setConfirmarSenhaValida] = useState(false);
 
-  const validarEmail = (email) => {
-    // Lógica de validação de e-mail (pode ser uma expressão regular)
-    return email.includes('@');
+  const isValidEmail = (email) => {
+    // Adicione a lógica de validação de e-mail
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
   };
 
-  const validarSenha = (senha) => {
-    // Lógica de validação de senha (pode ser qualquer regra desejada)
-    return senha.length >= 6 && /[A-Z]/.test(senha);
+  const isValidCPF = (cpf) => {
+    // Adicione a lógica de validação de CPF
+    const cpfRegex = /^[0-9]{11}$/;
+    return cpfRegex.test(cpf);
+  };
+
+  const isValidPassword = (password) => {
+    // Adicione a lógica de validação de senha (por exemplo, deve ter pelo menos 6 caracteres)
+    return password.length >= 6;
+  };
+
+  const validarCampos = () => {
+    setNomeValido(nome.trim() !== '');
+    setSobrenomeValido(sobrenome.trim() !== '');
+    setEmailValido(isValidEmail(email));
+    setCpfValido(isValidCPF(cpf));
+    setSenhaValida(isValidPassword(senha));
+    setConfirmarSenhaValida(confirmarSenha === senha);
   };
 
   const registrar = () => {
-    // Lógica de registro
+    validarCampos();
+
     if (nomeValido && sobrenomeValido && emailValido && cpfValido && senhaValida && confirmarSenhaValida) {
-      Alert.alert('Registro Concluído', 'Registro realizado com sucesso!', [{ text: 'OK' }]);
+      // Se todos os campos são válidos, pode prosseguir com o registro
+      const usuarioTemp = {
+        nome: nome,
+        sobrenome: sobrenome,
+        email: email,
+        cpf: cpf,
+        senha: senha,
+      };
+      // Aqui você pode salvar o usuário, exibir um modal de sucesso, etc.
+      setModalVisible(true);
     } else {
-      Alert.alert('Registro Falhou', 'Por favor, preencha todos os campos corretamente.', [{ text: 'OK' }]);
+      // Exibir mensagem de erro ou fazer algo quando o registro falhar
+      Alert.alert('Erro', 'Preencha todos os campos corretamente.');
     }
   };
 
-  return React.createElement(
-    View,
-    { style: styles.container },
-    React.createElement(StatusBar, { style: 'auto' }),
-    React.createElement(
-      View,
-      { style: styles.body },
-      React.createElement(
-        View,
-        { style: styles.cima },
-        React.createElement(Text, { style: styles.textoTitulo }, ' Registro '),
-        React.createElement(Ionicons, { name: 'person-outline', size: 55, color: '#ffa500' })
-      ),
-      React.createElement(
-        View,
-        { style: styles.meio },
-        React.createElement(
-          View,
-          { style: styles.viewNomeInput },
-          React.createElement(Text, { style: styles.textoInput }, 'Nome'),
-          React.createElement(Text, { style: styles.textoInput }, 'Sobrenome'),
-          React.createElement(Text, { style: styles.textoInput }, 'Email'),
-          React.createElement(Text, { style: styles.textoInput }, 'CPF'),
-          React.createElement(Text, { style: styles.textoInput }, 'Senha'),
-          React.createElement(Text, { style: styles.textoInput }, 'Confirmar')
-        ),
-        React.createElement(
-          View,
-          { style: styles.viewInput },
-          React.createElement(TextInput, {
-            value: nome,
-            onChangeText: (text) => {
-              setNome(text);
-              setNomeValido(text.trim() !== '');
-            },
-            placeholder: 'Digite seu nome',
-            style: [styles.input, { borderColor: nomeValido ? 'green' : 'red' }],
-          }),
-          React.createElement(TextInput, {
-            value: sobrenome,
-            onChangeText: (text) => {
-              setSobrenome(text);
-              setSobrenomeValido(text.trim() !== '');
-            },
-            placeholder: 'Digite seu sobrenome',
-            style: [styles.input, { borderColor: sobrenomeValido ? 'green' : 'red' }],
-          }),
-          React.createElement(TextInput, {
-            value: email,
-            onChangeText: (text) => {
-              setEmail(text);
-              setEmailValido(validarEmail(text));
-            },
-            placeholder: 'Digite seu email',
-            style: [styles.input, { borderColor: emailValido ? 'green' : 'red' }],
-          }),
-          React.createElement(TextInput, {
-            value: cpf,
-            onChangeText: (text) => {
-              setCpf(text);
-              setCpfValido(text.trim() !== '');
-            },
-            placeholder: 'Digite seu CPF',
-            style: [styles.input, { borderColor: cpfValido ? 'green' : 'red' }],
-          }),
-          React.createElement(TextInput, {
-            value: senha,
-            onChangeText: (text) => {
-              setSenha(text);
-              setSenhaValida(validarSenha(text));
-            },
-            placeholder: 'Digite sua senha',
-            style: [styles.input, { borderColor: senhaValida ? 'green' : 'red' }],
-            secureTextEntry: true,
-          }),
-          React.createElement(TextInput, {
-            value: confirmarSenha,
-            onChangeText: (text) => {
-              setConfirmarSenha(text);
-              setConfirmarSenhaValida(text === senha && senhaValida);
-            },
-            placeholder: 'Confirme sua senha',
-            style: [styles.input, { borderColor: confirmarSenhaValida ? 'green' : 'red' }],
-            secureTextEntry: true,
-          })
-        )
-      ),
-      React.createElement(
-        View,
-        { style: styles.baixo },
-        React.createElement(
-          TouchableOpacity,
-          {
-            style: styles.botaoAdd,
-            onPress: () => registrar(),
-            disabled: !(nomeValido && sobrenomeValido && emailValido && cpfValido && senhaValida && confirmarSenhaValida),
-          },
-          React.createElement(Text, null, 'Registrar')
-        ),
-        React.createElement(
-          TouchableOpacity,
-          { style: styles.botaoTrc, onPress: () => navigation.navigate('Login') },
-          React.createElement(Text, null, 'Logar')
-        )
-      )
-    ),
-    React.createElement(View, { style: styles.footer })
+  const closeModal = () => {
+    setModalVisible(false);
+  };
+
+  return (
+    <View style={styles.container}>
+      <View style={styles.body}>
+        <View style={styles.cima}>
+          <Text style={styles.textoTitulo}> Registro </Text>
+          <Ionicons name="person-outline" size={55} color={'#ffa500'} />
+        </View>
+        <View style={styles.meio}>
+          <View style={styles.viewNomeInput}>
+            <View style={styles.viewNome}>
+              <Text>Nome</Text>
+            </View>
+            <View style={styles.viewInput}>
+              <TextInput
+                value={nome}
+                onChangeText={(text) => {
+                  setNome(text);
+                  setNomeValido(text.trim() !== '');
+                }}
+                placeholder="Nome"
+                style={[styles.input, { borderColor: nomeValido ? 'green' : 'red' }]}
+              />
+            </View>
+          </View>
+          <View style={styles.viewNomeInput}>
+            <View style={styles.viewNome}>
+              <Text>Sobrenome</Text>
+            </View>
+            <View style={styles.viewInput}>
+              <TextInput
+                value={sobrenome}
+                onChangeText={(text) => {
+                  setSobrenome(text);
+                  setSobrenomeValido(text.trim() !== '');
+                }}
+                placeholder="Sobrenome"
+                style={[styles.input, { borderColor: sobrenomeValido ? 'green' : 'red' }]}
+              />
+            </View>
+          </View>
+          <View style={styles.viewNomeInput}>
+            <View style={styles.viewNome}>
+              <Text>Email</Text>
+            </View>
+            <View style={styles.viewInput}>
+              <TextInput
+                value={email}
+                onChangeText={(text) => {
+                  setEmail(text);
+                  setEmailValido(isValidEmail(text));
+                }}
+                placeholder="Email"
+                style={[styles.input, { borderColor: emailValido ? 'green' : 'red' }]}
+              />
+            </View>
+          </View>
+          <View style={styles.viewNomeInput}>
+            <View style={styles.viewNome}>
+              <Text>CPF</Text>
+            </View>
+            <View style={styles.viewInput}>
+              <TextInput
+                value={cpf}
+                onChangeText={(text) => {
+                  setCpf(text);
+                  setCpfValido(isValidCPF(text));
+                }}
+                placeholder="CPF"
+                style={[styles.input, { borderColor: cpfValido ? 'green' : 'red' }]}
+                autoCompleteType="off"
+              />
+            </View>
+          </View>
+          <View style={styles.viewNomeInput}>
+            <View style={styles.viewNome}>
+              <Text>Senha</Text>
+            </View>
+            <View style={styles.viewInput}>
+              <TextInput
+                value={senha}
+                onChangeText={(text) => {
+                  setSenha(text);
+                  setSenhaValida(isValidPassword(text));
+                }}
+                placeholder="Senha"
+                style={[styles.input, { borderColor: senhaValida ? 'green' : 'red' }]}
+                secureTextEntry
+              />
+            </View>
+          </View>
+          <View style={styles.viewNomeInput}>
+            <View style={styles.viewNome}>
+              <Text>Confirmar Senha</Text>
+            </View>
+            <View style={styles.viewInput}>
+              <TextInput
+                value={confirmarSenha}
+                onChangeText={(text) => {
+                  setConfirmarSenha(text);
+                  setConfirmarSenhaValida(text === senha);
+                }}
+                placeholder="Confirmar Senha"
+                style={[styles.input, { borderColor: confirmarSenhaValida ? 'green' : 'red' }]}
+                secureTextEntry
+              />
+            </View>
+          </View>
+        </View>
+        <View style={styles.baixo}>
+          <TouchableOpacity style={styles.botaoAdd} onPress={registrar}>
+            <Text>Registrar</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.botaoTrc} onPress={() => navigation.navigate('Login')}>
+            <Text>Logar</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+      <View style={styles.footer}></View>
+      <Modal transparent={true} animationType="slide" visible={modalVisible}>
+        <View style={styles.modalContainer}>
+          <View style={styles.modalContent}>
+            <Text>Registro concluído com sucesso!</Text>
+            <TouchableOpacity style={styles.btn} onPress={closeModal}>
+              <Text>OK</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Modal>
+    </View>
   );
-}
+};
+
+export default Registro;
