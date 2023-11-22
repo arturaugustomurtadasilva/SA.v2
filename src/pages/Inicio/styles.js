@@ -23,7 +23,11 @@ export const styles = StyleSheet.create({
         height:'70%',
 
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
+    },
+    textInt:{
+        fontSize:20,
+        margin:5,
     },
     viewBaixo: {
         width:'100%',

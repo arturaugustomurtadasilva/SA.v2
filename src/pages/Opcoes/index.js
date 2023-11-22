@@ -22,7 +22,11 @@ export default function Opcoes() {
   };
 
   return (
+
+
+
     <View style={styles.container}>
+      <View style={styles.body}>
       <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Perfil')}>
         <Text>Editar dados</Text>
       </TouchableOpacity>
@@ -32,13 +36,13 @@ export default function Opcoes() {
       <TouchableOpacity style={styles.btn} onPress={handleExcluirConta}>
         <Text>Excluir conta</Text>
       </TouchableOpacity>
-
-      {/* Modal de confirmação de exclusão */}
       <ConfirmacaoExclusao
         visible={modalVisible}
         onClose={() => setModalVisible(false)}
         onConfirm={handleConfirmarExclusao}
       />
+      </View>
+      <View style={styles.footer}></View>
     </View>
   );
 }

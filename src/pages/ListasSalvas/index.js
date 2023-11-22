@@ -1,13 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { StatusBar, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { styles } from './styles';
 
-import { styles } from './styles'
+export default function Cadastro() {
 
-export default function ListasSalvas() {
   return (
     <View style={styles.container}>
-      <Text>tela listas salvas</Text>
-      <StatusBar style="auto" />
+      <View style={styles.body}>
+        
+      </View>
+      <View style={styles.footer}></View>
+      <StatusBar style='auto' />
     </View>
   );
 }

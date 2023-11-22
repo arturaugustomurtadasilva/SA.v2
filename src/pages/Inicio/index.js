@@ -1,10 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
-import { TouchableOpacity } from 'react-native';
+import { Text, View, Image, TouchableOpacity } from 'react-native';
 import { styles } from './styles.js'
 import { useNavigation } from "@react-navigation/native";
 import { Ionicons } from '@expo/vector-icons'
-
 
 
 export default function Inicio() {
@@ -28,7 +26,10 @@ export default function Inicio() {
         </View> 
 
         <View style={styles.viewMeio}>
-            
+            <Image
+                style={{height:'30%',width:'45%'}}
+                source={require('../../img/TelaInicio/tl.webp')}
+            />
         </View> 
 
         <View style={styles.viewBaixo}>

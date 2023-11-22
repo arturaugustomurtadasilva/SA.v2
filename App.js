@@ -22,12 +22,12 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen options={{headerShown:false,}} name="Inicio" component={Inicio}/>
+        <Stack.Screen options={{headerShown:false, title:'Início'}} name="Inicio" component={Inicio}/>
         <Stack.Screen options={{headerShown:false,}} name="Login" component={Login}/>
         <Stack.Screen options={{headerShown:false,}} name="Registro" component={Registro}/>
-        <Stack.Screen options={{headerShown:true,}} name="ListasSalvas" component={ListasSalvas}/>
+        <Stack.Screen options={{headerShown:true, title:'Minhas listas'}} name="ListasSalvas" component={ListasSalvas}/>
         <Stack.Screen options={{headerShown:false,}} name="Home" component={Home}/>
-        <Stack.Screen options={{headerShown:true,}} name="Opcoes" component={Opcoes}/>
+        <Stack.Screen options={{headerShown:true, title:'Opções'}} name="Opcoes" component={Opcoes}/>
       </Stack.Navigator>
     </NavigationContainer>
 
