@@ -27,9 +27,6 @@ export default function Opcoes() {
 
     <View style={styles.container}>
       <View style={styles.body}>
-      <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Perfil')}>
-        <Text>Editar dados</Text>
-      </TouchableOpacity>
       <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Login')}>
         <Text>Sair</Text>
       </TouchableOpacity>

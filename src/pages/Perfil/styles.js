@@ -46,6 +46,7 @@ export const styles = StyleSheet.create({
     viewInput:{
       alignItems:'center',
       justifyContent:'center',
+      flexDirection:'row',
       width:'60%',
       height:'100%',
     },
@@ -84,4 +85,23 @@ export const styles = StyleSheet.create({
     textoH1:{
       fontSize:20,
     },
+    botaoEditar:{
+      height:'30%',
+      width:'45%',
+      borderWidth:1,
+      borderRadius:5,
+      backgroundColor:'white',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    botaoSalvar:{
+      height:'30%',
+      width:'45%',
+      borderWidth:1,
+      borderRadius:5,
+      backgroundColor:'white',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
   });
+  
