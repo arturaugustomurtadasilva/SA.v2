@@ -26,8 +26,9 @@ export default function Inicio() {
         </View> 
 
         <View style={styles.viewMeio}>
+            <Text>Bem-vindo ao MYBO</Text>
             <Image
-                style={{height:'30%',width:'45%'}}
+                style={{height:'30%',width:'45%',marginTop:40}}
                 source={require('../../img/TelaInicio/tl.webp')}
             />
         </View> 
