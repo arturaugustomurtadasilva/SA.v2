@@ -26,11 +26,14 @@ export default function Inicio() {
         </View> 
 
         <View style={styles.viewMeio}>
-            <Text>Bem-vindo ao MYBO</Text>
             <Image
-                style={{height:'30%',width:'45%',marginTop:40}}
+                style={{height:'30%',width:'45%',margin:40}}
                 source={require('../../img/TelaInicio/tl.webp')}
-            />
+                />
+            <Text>Bem-vindo ao MYBO</Text>
+            <Text>Promovemos o matching do produto ideal,</Text>
+            <Text>pelo preço necessário.</Text>
+
         </View> 
 
         <View style={styles.viewBaixo}>

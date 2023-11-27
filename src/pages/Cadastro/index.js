@@ -77,13 +77,13 @@ return (
       ) : (
         <View style={styles.meio}>
           <View style={styles.viewNomeInput}>
-            <Text>Título</Text>
+            <Text>Produto</Text>
             <Text>Gênero</Text>
             <Text>Vagas</Text>
             <Text>Desconto</Text>
           </View>
           <View style={styles.viewInput}>
-            <TextInput value={titulo} onChangeText={setTitulo} placeholder='Título' style={styles.input} />
+            <TextInput value={titulo} onChangeText={setTitulo} placeholder='Produto' style={styles.input} />
             <TextInput value={genero} onChangeText={setGenero} placeholder='Gênero' style={styles.input} />
             <TextInput value={tamanhoLista} onChangeText={setTamanhoLista} placeholder='Vagas' style={styles.input} />
             <TextInput value={desconto} onChangeText={setDesconto} placeholder='Desconto' style={styles.input} />

@@ -10,11 +10,11 @@ export default function Login() {
   const navigation = useNavigation();
 
   const conta = {
-    nome: 'artur',
-    email: 'artur@gmail.com',
+    nome: 'usuario',
+    email: 'usuario@gmail.com',
     cpf: '06614072927',
     telefone: '4899999999',
-    senha: 'Aaaaa'
+    senha: 'Senha'
   }
 
   const [usuario, setUsuario] = useState('')

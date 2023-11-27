@@ -1,43 +1,56 @@
-import React, { useState } from 'react';
-import {  Text, View, ScrollView } from 'react-native';
-import { styles } from './styles';
-import FeedItem from '../../components/FeedItem/index';
+import React from 'react';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { TouchableOpacity } from 'react-native-web';
 
-export default function Feed() {
-  const nomes = ['a', 'b', 'c', 'd', 'e', 'f', 'g',];
-  const [nomesFavoritados, setNomesFavoritados] = useState([]);
+const produtos = [
+  { letra: 'Produto A', numero: 'entrar' },
+  { letra: 'Produto B', numero: 'entrar' },
+  { letra: 'Produto C', numero: 'entrar' },
+  { letra: 'Produto D', numero: 'entrar' },
+  { letra: 'Produto E', numero: 'entrar' },
+  { letra: 'Produto F', numero: 'entrar' },
+  { letra: 'Produto G', numero: 'entrar' },
+  { letra: 'Produto H', numero: 'entrar' },
+  { letra: 'Produto I', numero: 'entrar' },
+  { letra: 'Produto J', numero: 'entrar' },
+];
 
-  const handleFavoritar = (nome, favoritado) => {
-    if (favoritado) {
-      setNomesFavoritados([...nomesFavoritados, nome]);
-    } else {
-      setNomesFavoritados(nomesFavoritados.filter(item => item !== nome));
-    }
-    console.log(nomesFavoritados);
-  };
-
+const App = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.body}>
-        <View style={styles.viewTitulo}>
-          <Text style={styles.textTitle}>
-            Listas
-          </Text>
-        </View>
-
-        {/* Utilize o ScrollView para tornar a viewFeed rolável */}
-        <ScrollView 
-          style={styles.viewFeedItem}
-          showsVerticalScrollIndicator={false}
-          >
-          <View>
-            {nomes.map((nome, index) => (
-              <FeedItem key={index} nome={nome} onFavoritar={handleFavoritar} />
-            ))}
+      <ScrollView>
+        {produtos.map((produto, index) => (
+          <View key={index} style={styles.tweet}>
+            <Text style={styles.produto}>{produto.letra}</Text>
+            <TouchableOpacity style={styles.numero}>{produto.numero}</TouchableOpacity>
           </View>
-          <View style={{ height: '10%' }}></View>
-        </ScrollView>
-      </View>
+        ))}
+      </ScrollView>
     </View>
   );
-}
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 20,
+    paddingTop: 50,
+  },
+  tweet: {
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    borderWidth: 1,
+    borderColor: '#ccc',
+    padding: 10,
+    margin: 10,
+    borderRadius: 5,
+  },
+  produto: {
+    flex: 1,
+  },
+  numero: {
+    fontWeight: 'bold',
+  },
+});
+
+export default App;
